@@ -1,0 +1,38 @@
+// Common styles of the project
+
+html, body {
+  height: 100%;
+  color: #1a1b1b;
+  font-family: HelveticaNeueCyr, sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 34px;
+}
+
+.container{
+
+}
+
+
+.page {
+}
+
+
+.page__wrapper {
+  min-height: 100%;
+  padding-bottom: 85px;
+
+}
+* html .page__wrapper {
+    height: 100%;
+}
+
+.page__buffer {
+    //height: 50px;
+}
+body {
+  //height: 400vh;
+  //padding-top: 90px;
+}
+
+

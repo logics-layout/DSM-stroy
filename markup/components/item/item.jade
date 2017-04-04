@@ -1,0 +1,7 @@
+mixin item(num)
+    - num = num || 0;
+    - var rowItem = {}
+    - if(item.list[num])
+        - rowItem = item.list[num]
+    - else
+        - rowItem = item.list[0]
