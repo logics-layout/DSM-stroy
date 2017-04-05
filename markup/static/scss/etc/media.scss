@@ -5,8 +5,83 @@ body, html{
   min-width: 320px;
 }
 
-@include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+@include my-media-query(max, 1590px) {
+  .header__padding-left {
+    //padding-left: 80px;
+  }
+  .header {
+    &__logo {
+      width: 120px;
+    }
+  }
+}
+@include my-media-query(max, 1408px) {
+  .header__padding-left{
+    //padding-left: 80px;
+  }
+  .header {
+    &__logo {
+      display: none;
+    }
+  }
+}
 
+@include my-media-query(max, map_get($grid-breakpoints, xl)-1) {
+  .sub-menu {
+    padding: 40px 0;
+  }
+  .header {
+    &__top{
+      font-size: 13px;
+      &-nav {
+        margin: 0 -10px;
+        li {
+          a {
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+    &__bottom{
+      line-height: 90px;
+      .btn-sm{
+        font-size: 14px;
+        padding: 11px 15px;
+      }
+    }
+    &__phones{
+      margin: 0 -15px;
+      &-item {
+        font-size: 16px;
+        padding: 0 15px;
+      }
+    }
+    &__table{
+      &-cell{
+        &_btn{
+          padding-left: 10px;
+        }
+      }
+    }
+    &__bottom{
+      &-line {
+        margin: 0 25px;
+      }
+      &-nav {
+        > ul {
+          margin: 0 -13px;
+          > li {
+            > a {
+              display: block;
+              color: #282528;
+              font-size: 15px;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
@@ -26,11 +101,24 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .header{
+    height: 137px;
+    .header__content{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      //box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
+    }
+  }
 
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
-
+  .header {
+    height: 153px;
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {

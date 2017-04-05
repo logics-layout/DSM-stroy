@@ -95,41 +95,6 @@ hr{
   }
 }
 
-ol, ul{
-  list-style: none;
-  padding: 0;
-  li{
-    position: relative;
-    padding-left: 32px;
-    &:after{
-      content: '';
-      display: block;
-      width: 10px;
-      height: 10px;
-      background-color: #ef9c00;
-      position: absolute;
-      left: 0;
-      top: 7px;
-      line-height: 20px;
-      color: #fff;
-      font-size: 15px;
-      font-weight: 400;
-      text-align: center;
-    }
-  }
-}
-ol{
-  li {
-    counter-increment: li;
-    padding-left: 37px;
-    &:after {
-      content: counter(li);
-      width: 16px;
-      height: 16px;
-      top: 3px;
-    }
-  }
-}
 
 //ul{
 //  //@include nl;

@@ -17,7 +17,7 @@
   //border: 3px solid transparent;
   border: none;
   white-space: nowrap;
-  @include button-size(16px, 43px, $font-size-base, $line-height-base, $btn-border-radius-base);
+  @include button-size(16px, 35px, $font-size-base, $line-height-base, $btn-border-radius-base);
   @include user-select(none);
   //outline: none;
   position: relative;
@@ -25,9 +25,9 @@
 
   color: white;
 
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 0;
 
   &.btn-ttu{
     text-transform: uppercase;
@@ -70,8 +70,8 @@
   &.active {
     outline: 0;
     //background-image: none;
-    box-shadow: 0 0 0 #000;
-    transform: translateY(3px);
+    //box-shadow: 0 0 0 #000;
+    //transform: translateY(3px);
   }
 
   &.disabled,
@@ -103,9 +103,9 @@ a.btn {
 //.btn-green{
 //  @include button-variant(#fff, #54bb00);
 //}
-//.btn-blue{
-//  @include button-variant(#fff, #225faa);
-//}
+.btn-blue{
+  @include button-variant(#fff, #3c77f1);
+}
 .btn-grey{
   @include button-variant(#fff, #666);
 }
@@ -162,11 +162,10 @@ a.btn {
   padding: 24px 60px;
   max-width: 100%;
 }
-//.btn-sm {
-//  font-size: 12px;
-//  padding-top: 5.5px;
-//  padding-bottom: 5.5px;
-//}
+.btn-sm {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 //.btn-xl {
 //  font-size: 15px;
 //  padding-top: 16px;

@@ -1,5 +1,218 @@
 .header{
+  &__content{
+    position: relative;
+  }
+  &__logo{
+    background-color: #e65711;
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 2;
+    width: 205px;
+    text-align: center;
+    line-height: 150px;
+    padding: 0 25px;
+    img{
+      display: inline-block;
+    }
+  }
+  &__top{
+    background-color: #f6f8fa;
+    &-nav{
+      @include nl;
+      margin: 0 -25px;
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        a{
+          display: block;
+          color: #282528;
+          padding: 0 25px;
+          line-height: 46px;
+          >span{
+            border-bottom: 1px solid rgba(40, 37, 40, 0.1);
+          }
+          &:hover{
+            >span{
+              border-bottom-color: rgba(40, 37, 40, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__download{
+    color: #282528;
+    white-space: nowrap;
+    margin: -5px;
+    line-height: 46px;
+    display: block;
+    text-align: right;
+    >*{
+      display: inline-block;
+      vertical-align: middle;
+      white-space: normal;
+      padding: 5px;
+    }
+    &-title{
+      >span{
+        border-bottom: 1px dashed rgba(40, 37, 40, 0.3);
+      }
+    }
+    &:hover{
+      .header__download-title{
+        >span{
+          border-bottom-color: rgba(40, 37, 40, 0.6);
+        }
+      }
+    }
+  }
+  &__table{
+    display: table;
+    width: 100%;
+    &-cell{
+      display: table-cell;
+      vertical-align: middle;
+      //+*{}
+      &_btn{
+        padding-left: 32px;
+        text-align: right;
+      }
+    }
+  }
+  &__phones{
+    margin: 0 -23.5px;
+    &-item{
+      display: inline-block;
+      vertical-align: middle;
+      color: #666;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 0 23.5px;
+      >span{
+        border-bottom: 1px solid transparent;
+      }
+      &:hover{
+        >span{
+          border-bottom-color: rgba(40, 37, 40, 0.3);
+        }
+      }
+    }
+  }
+  &__bottom{
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(47, 47, 47, 0.1);
+    line-height: 105px;
+    position: relative;
+    &-line{
+      width: 1px;
+      height: 50px;
+      background-color: #e64534;
+      margin: 0 45px;
+    }
+    &-nav{
+      ul{
+        @include nl;
+      }
+      >ul{
+        margin: 0 -23px;
+        >li{
+          display: inline-block;
+          vertical-align: middle;
+          &.parent{
+            >a{
+              padding-right: 0;
+            }
+            &:hover{
+              >a{
+                span{
+                  background-color: $orange;
+                  color: #fff;
+                  fill: #fff;
+                }
+              }
+              .sub-menu{
+                opacity: 1;
+                margin-top: 0;
+                visibility: visible;
+              }
+            }
+          }
+          >a{
+            display: block;
+            color: #282528;
+            font-size: 18px;
+            font-weight: 700;
+            fill: #e65711;
+            padding: 0 10px;
+            >span{
+              display: inline-block;
+              line-height: normal;
+              padding: 8px 13px;
+            }
+            &:hover{
+              >span{
+                background-color: $orange;
+                color: #fff;
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+.sub-menu{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 33px 40px rgba(47, 47, 47, 0.3);
+  border-top: 4px solid $orange;
+  line-height: normal;
+  padding: 60px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 20px;
+  @include tr;
+
+  &__sections{
+    width: 100%;
+    display: table;
+    //font-size: 0;
+    //margin: 0 -20px;
+    &-section{
+      display: table-cell;
+      //font-size: 14px;
+      vertical-align: top;
+      //padding: 0 20px;
+    }
+  }
+  &__list{
+    ul{
+      margin: -4px -10px;
+      li{
+        display: block;
+        padding: 4px 0;
+        a{
+          display: inline-block;
+          color: #282528;
+          padding: 4.5px 10px;
+
+          &:hover{
+            background-color: $mainColor;
+            box-shadow: 0 2px 10px rgba(40, 56, 80, 0.15);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 

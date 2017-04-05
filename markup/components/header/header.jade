@@ -1,5 +1,88 @@
 mixin header(data)
     .header(class!=data).not-styleLink
+        .header__content
+            a(href="#").header__logo: +img('assets/header/logo', 'png')
+
+
+            .header__top
+                .container.header__padding-left
+                    .row
+                        .col-lg-9
+                            ul.header__top-nav
+                                li: a(href="#"): span Наши партнёры
+                                li: a(href="#"): span Отзывы
+                                li: a(href="#"): span Доставка и оплата
+                                li: a(href="#"): span Вопрос и ответ
+                                li: a(href="#"): span Контактная информация
+                        .col-lg-3
+                            a(href="#").header__download
+                                span.header__download-icon: i.s-download
+                                span.header__download-title: span Скачать прайс-лист
+            .header__bottom
+                .container.header__padding-left
+                    .header__table
+                        .header__table-cell
+                            .header__bottom-nav
+                                ul
+                                    li.parent
+                                        a(href="#")
+                                            span Каталог
+                                                +icon('arrow-bottom')
+                                        .sub-menu
+                                            .container
+                                                .sub-menu__sections
+                                                    .sub-menu__sections-section
+                                                        .sub-menu__list
+                                                            ul
+                                                                li: a(href="#") Кирпич лицевой керамический
+                                                                li: a(href="#") Кирпич рядовой керамический
+                                                                li: a(href="#") Кирпич полнотелый
+                                                                li: a(href="#") Кирпич полнотелый с пустотностью 6%
+                                                                li: a(href="#") Кирпич полнотелый с пустотностью 12%
+                                                                li: a(href="#") Кирпич пустотелый
+                                                                li: a(href="#") Кирпич силикатный
+                                                    .sub-menu__sections-section
+                                                        .sub-menu__list
+                                                            ul
+                                                                li: a(href="#") Арматура
+                                                                li: a(href="#") Швеллер
+                                                                li: a(href="#") Двутавр
+                                                                li: a(href="#") Кровельные материалы
+                                                                li: a(href="#") Пеноблок
+                                                                li: a(href="#") Газоблок
+                                                                li: a(href="#") Шлакоблок
+                                                    .sub-menu__sections-section
+                                                        .sub-menu__list
+                                                            ul
+                                                                li: a(href="#") Технониколь
+                                                                li: a(href="#") Эковер
+                                                                li: a(href="#") Утеплитель ИЗБА
+                                                                li: a(href="#") Плиты перекрытия ПБ
+                                                                li: a(href="#") Блоки ФБС
+                                                                li: a(href="#") Фундаментная лента
+                                                                li: a(href="#") Перемычки железобетонные
+                                                    .sub-menu__sections-section
+                                                        .sub-menu__list
+                                                            ul
+                                                                li: a(href="#") Плиты перекрытия ПК
+                                                                li: a(href="#") Лестничные ступени
+                                                                li: a(href="#") Опорные подушки
+                                                                li: a(href="#") Прогоны ПРГ
+                                                                li: a(href="#") Плиты плоские
+
+
+                                    li: a(href="#"): span Спецпредложения
+                                    li: a(href="#"): span Наши объекты
+
+                        .header__table-cell: .header__bottom-line
+                        .header__table-cell
+                            .header__phones
+                                a(href="#").header__phones-item: span 8 (351) 200 40 18
+                                a(href="#").header__phones-item: span 8 (909) 069 14 60
+                        .header__table-cell.header__table-cell_btn
+                            button.btn.btn-blue.btn-sm Отправить заявку
+
+
 
 
 
