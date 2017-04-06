@@ -426,6 +426,9 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  h2, .h2 {
+    font-size: 19px;
+  }
   .item-list {
     &__section {
       width: 100%;
@@ -434,6 +437,14 @@ body, html{
   .filter-table {
     &__cell {
       width: 100%;
+    }
+  }
+  .item-list-slider {
+    &__section {
+      .item{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
     }
   }
   .callbackTwo {

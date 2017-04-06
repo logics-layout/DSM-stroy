@@ -89,6 +89,7 @@ html, body {
   background-position: center;
   padding-top: 52px;
   padding-bottom: 55px;
+  color: #fff;
   &__shadow{
     box-shadow: 11px 19.1px 35px rgba(40, 56, 80, 0.12);
   }
@@ -249,7 +250,7 @@ html, body {
       width: 77%;
       border-left: 1px solid #cacaca;
       //margin-left: -1px;
-      padding: 20px 29px;
+      padding: 25px 29px;
     }
   }
 }

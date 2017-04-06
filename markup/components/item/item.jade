@@ -10,7 +10,8 @@ mixin item(num, key)
     a(href="#").item.not-styleLink.color-block-two
         span.db.item__img: +img(rowItem.img)
         span.db.item__title: b.color-block-two= rowItem.title
-        span.db.item__title-sub= rowItem.titleSub
+        - if(rowItem.titleSub)
+            span.db.item__title-sub= rowItem.titleSub
         - if(rowItem.features)
             span.db.item__features
                 - for(var i = 0; i < rowItem.features.length; i++)
