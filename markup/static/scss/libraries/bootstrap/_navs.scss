@@ -77,58 +77,50 @@
   @include nl;
   //border-bottom: 1px solid $nav-tabs-border-color;
   font-size: 0;
-  //margin: -15px -25px;
-  display: table;
+  display: inline-block;
   width: 100%;
-  position: relative;
-  &:after{
-    content: '';
-    background-color: #e6e6e6;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
+  border-bottom: 1px solid $mainColor;
+  margin-bottom: 40px;
+  //&:after{
+  //  content: '';
+  //  background-color: #e6e6e6;
+  //  height: 2px;
+  //  width: 100%;
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: 0;
+  //}
   > li {
-    display: table-cell;
-    vertical-align: top;
+    display: inline-block;
     //float: left;
     // Make the list-items overlay the bottom border
     //margin-bottom: -1px;
     // Actual tabs (as links)
-    margin-bottom: -2px;
-    padding: 0 12px;
-    &:first-child{
-      padding-left: 0;
-    }
-    &:last-child{
-      padding-right: 0;
+    margin-bottom: -1px;
+    +li{
+      padding-left: 6px;
     }
     > a {
-      padding: 21px 25px;
-      border: 2px solid #e6e6e6;
+      padding: 19.5px 34px;
       margin: 0;
-      line-height: normal;
-      font-weight: 300;
       color: #575757;
-      font-size: 20px;
       text-align: center;
       display: block;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: normal;
       //border-radius: $border-radius-base $border-radius-base 0 0;
       &:hover, &:focus {
-        color: #353650;
-        border-color: #e6e6e6;
-        background-color: #e6e6e6;
+        color: $mainColor;
+        background-color: transparent;
       }
     }
     &.active > a {
       &,
       &:hover,
       &:focus {
-        color: #353650;
-        border-color: transparent;
-        background-color: #e6e6e6;
+        color: #fff;
+        background-color: $mainColor;
       }
     }
   }

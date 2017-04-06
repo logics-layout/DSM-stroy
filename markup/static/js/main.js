@@ -159,6 +159,10 @@ if ($.fn.magnificPopup) {
     })
 }
 
+if($.fn.tabcordion){
+    $('.tabcordion').tabcordion();
+}
+
 // $('.catalog-category-list a').click(function(e){
 //     var _this = $(this),
 //         list = _this.next('ul'),

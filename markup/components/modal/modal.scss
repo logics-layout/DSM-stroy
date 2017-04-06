@@ -70,13 +70,12 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 22px;
-    height: 100%;
+    height: auto;
     z-index: 9;
-    fill: #b4b4b4;
-    padding-right: 42px;
+    fill: #000;
+    padding: 6px 15px;
     &:hover{
-      fill: #000;
+      fill: $orange;
     }
     i{
       svg{
@@ -85,6 +84,8 @@
     }
   }
 }
+
+
 
 // Actual modal
 .modal-content {
@@ -116,49 +117,28 @@
 }
 
 
-// Modal header
-// Top section of the modal w/ title and dismiss
-.modal-header {
-  padding: 30.5px 0;
-  //border-bottom: 1px solid $modal-header-border-color;
-  //background-color: #e6e6e6;
-  background-image: url('%=static=%assets/header/bg_bottom.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  &__title{
-    color: #fff;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 34px;
-    margin: 0;
-  }
-  //@include clearfix;
-}
 // Close icon
 .modal-header .close {
   //margin-top: -2px;
 }
 
 // Title text within header
-.modal-title {
-  margin: 0;
-  //line-height: $modal-title-line-height;
-  //text-align: center;
-  font-size: 26px;
-  line-height: 28px;
-  font-weight: 600;
-  color: #010302;
-  font-family: Neris, sans-serif;
-
-  margin-bottom: 17px;
-  &.small{
-    font-size: 20px;
-    line-height: 30px;
-  }
-  &-sub{
-    font-weight: 300;
-    text-align: center;
+.modal{
+  &__title{
+    color: #3c77f1;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    margin-bottom: 10px;
+    &-sub{
+      color: #282528;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: normal;
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -200,10 +180,10 @@
   overflow: scroll;
 }
 
-.modal-padding {
-  padding-left: 54px;
-  padding-right: 54px;
-}
+//.modal-padding {
+//  padding-left: 54px;
+//  padding-right: 54px;
+//}
 
 // Scale up the modal
 @media (min-width: $screen-sm-min) {
@@ -220,8 +200,28 @@
     line-height: 36px;
   }
 
+  .modal-dialog {
+    .close {
+      padding: 54px 0;
+      padding-left: 30px;
+      left: 100%;
+      fill: #fff;
+      top: 0;
+    }
+  }
+
+  .modal{
+    &__title{
+      font-size: 30px;
+      &-sub{
+        font-size: 16px;
+      }
+    }
+  }
+
   .modal-body {
-    padding: 39px 60px;
+    padding: 50px 50px;
+    padding-top: 35px;
   }
 
   .well-title{

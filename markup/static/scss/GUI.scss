@@ -9,6 +9,8 @@
 @import "libraries/bootstrap/forms";
 @import "libraries/bootstrap/navs";
 @import "libraries/bootstrap/dropdowns";
+@import "libraries/bootstrap/component-animations";
+@import "libraries/bootstrap/panels";
 
 a{
   //color: #e74700;
@@ -88,7 +90,7 @@ p {
 }
 
 hr{
-  border-color: #f0f1f2;
+  border-color: #fff;
   margin: 55px 0;
   &.two{
     margin: 25px 0;

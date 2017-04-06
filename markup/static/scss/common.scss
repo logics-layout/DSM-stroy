@@ -7,7 +7,6 @@ html, body {
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
-  background-color: #eee;
 }
 
 .container{
@@ -31,10 +30,6 @@ html, body {
 .page__buffer {
     //height: 50px;
 }
-body {
-  //height: 400vh;
-  //padding-top: 90px;
-}
 
 .copyright{
   display: inline-block;
@@ -48,6 +43,76 @@ body {
     font-size: 14px;
     +*{
       padding-left: 30px;
+    }
+  }
+}
+
+.block-blue{
+  background-color: $mainColor;
+  padding: 75px 0;
+}
+.block-tabs{
+  padding: 75px 0;
+}
+
+.category-list{
+  display: table;
+  width: 100%;
+  >*{
+    display: table-cell;
+    vertical-align: top;
+  }
+  &__item{
+    @include nl;
+    margin: -4px -10px;
+    line-height: normal;
+    font-size: 14px;
+    li{
+      display: block;
+      padding: 6px 0;
+      a{
+        display: inline-block;
+        color: white;
+        padding: 4.5px 10px;
+        &:hover{
+          background-color: #fff;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.callback{
+  background-size: cover;
+  background-image: url('%=static=%content/callback-bg.jpg');
+  padding-top: 52px;
+  padding-bottom: 55px;
+  &__shadow{
+    box-shadow: 11px 19.1px 35px rgba(40, 56, 80, 0.12);
+  }
+  &__title{
+    color: #fff;
+    fill: #fff;
+    margin: 0 -10px;
+    margin-bottom: 40px;
+    >*{
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 10px;
+    }
+    &-big{
+      font-size: 35px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    &-line{
+      margin-bottom: -15px;
+    }
+    &-small{
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
     }
   }
 }

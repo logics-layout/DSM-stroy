@@ -1,44 +1,29 @@
 mixin modal()
-    #callback(class="modal fade")
-        .modal-dialog.modal-md
+    #modal-callback(class="modal fade")
+        .modal-dialog.modal-sm
             .modal-content
-                .modal-header.modal-padding
-                    p.modal-header__title Узнать цену
-                    //button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
-                .modal-body.modal-padding
-                    .row: .col-xs-11
-                        #callback-form
-                            .modal__table
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваша заявка
-                                    div.modal__table-col
-                                        input.form-control(placeholder="Экскаватор TVEX 180W")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ваш город
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Приобретение в лизинг
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Ф.И.О
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Эл. почта
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                                .modal__table-row
-                                    div.modal__table-col
-                                        span Телефон
-                                    div.modal__table-col
-                                        input.form-control(placeholder="")
-                            br
-                            .text-center: button.btn.btn-orange.btn-ttu Отправить заявку
+                .modal-body
+                    button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                    p.modal__title Оставьте заявку
+                    p.modal__title-sub Наши менеджеры свяжутся с вами в ближайшее время
+                    br
+                    .form-group
+                        input.form-control(placeholder="Ваше Ф.И.О")
+                    .form-group.form-group_error
+                        input.form-control(placeholder="Укажите вашу эл. почту")
+                        span.form-group__error
+                    br
+                    button.btn.btn-blue Отправить заявку
+
+    #modal-callback-yes(class="modal fade")
+        .modal-dialog.modal-sm
+            .modal-content
+                .modal-body
+                    button(type="button", class="close", data-dismiss="modal", aria-hidden="true"): +icon('clear')
+                    p.modal__title Спасибо,
+                        br
+                        |Ваша заявка принята
+                    p.modal__title-sub Наши менеджеры свяжутся с вами в ближайшее время
+                    br
+                    button.btn.btn-blue Вернуться на главную
 

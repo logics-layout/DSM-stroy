@@ -97,55 +97,6 @@
       }
     }
   }
-
-  &.white{
-    background: #fff;
-    border-color: #fff;
-    color: $background;
-    $color: $background;
-
-    &:focus,
-    &.focus {
-      color: $color;
-      background: darken(#fff, 20%);
-      border-color: darken(#fff, 20%);
-    }
-    &:hover {
-      color: $color;
-      background: darken(#fff, 15%);
-      border-color: darken(#fff, 15%);
-    }
-    &:active,
-    &.active,
-    .open > &.dropdown-toggle {
-      color: $color;
-      background: darken(#fff, 15%);
-      border-color: darken(#fff, 15%);
-
-      &:hover,
-      &:focus,
-      &.focus {
-        color: $color;
-        background: darken(#fff, 25%);
-        border-color: darken(#fff, 25%);
-      }
-    }
-    &:active,
-    &.active,
-    .open > &.dropdown-toggle {
-      background-image: none;
-    }
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] & {
-      &:hover,
-      &:focus,
-      &.focus {
-        background-color: transparent;
-        border-color: $border;
-      }
-    }
-  }
 }
 
 // Button sizes

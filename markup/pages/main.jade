@@ -37,6 +37,139 @@ html(class="no-js", lang="ru")
 
             .page__buffer
         .page__footer
+
+            - if(!callback)
+                .callback
+                    .container
+                        .callback__title
+                            span.callback__title-big Оставьте заявку
+                            span.callback__title-line.hidden-md-down: +icon('callback__title-line')
+                            span.callback__title-small Наши менеджеры свяжутся с вами в ближайшее время
+
+                        .row
+                            .col-lg-4
+                                .form-group
+                                    input(placeholder="Ваше Ф.И.О").form-control.form-control_white
+                            .col-lg-4
+                                .form-group
+                                    input(placeholder="Укажите вашу эл. почту").form-control.form-control_white
+                            .col-lg-4
+                                .form-group
+                                    button.btn.btn-white.btn-border.btn-width.btn-input Отправить заявку
+
+                        - if(callbackCategory)
+                            hr
+                            .category-list.not-styleLink
+                                .category-list__section
+                                    ul.category-list__item
+                                        li: a(href="#") Кирпич лицевой керамический
+                                        li: a(href="#") Кирпич рядовой керамический
+                                        li: a(href="#") Кирпич полнотелый
+                                        li: a(href="#") Кирпич полнотелый с пустотностью 6%
+                                        li: a(href="#") Кирпич полнотелый с пустотностью 12%
+                                        li: a(href="#") Кирпич пустотелый
+                                        li: a(href="#") Кирпич силикатный
+                                .category-list__section
+                                    ul.category-list__item
+                                        li: a(href="#") Арматура
+                                        li: a(href="#") Швеллер
+                                        li: a(href="#") Двутавр
+                                        li: a(href="#") Кровельные материалы
+                                        li: a(href="#") Пеноблок
+                                        li: a(href="#") Газоблок
+                                        li: a(href="#") Шлакоблок
+                                .category-list__section
+                                    ul.category-list__item
+                                        li: a(href="#") Технониколь
+                                        li: a(href="#") Эковер
+                                        li: a(href="#") Утеплитель ИЗБА
+                                        li: a(href="#") Плиты перекрытия ПБ
+                                        li: a(href="#") Блоки ФБС
+                                        li: a(href="#") Фундаментная лента
+                                        li: a(href="#") Перемычки железобетонные
+                                .category-list__section
+                                    ul.category-list__item
+                                        li: a(href="#") Плиты перекрытия ПК
+                                        li: a(href="#") Лестничные ступени
+                                        li: a(href="#") Опорные подушки
+                                        li: a(href="#") Прогоны ПРГ
+                                        li: a(href="#") Плиты плоские
+                            br.hidden-xs-down
+
+
+            - if(!tabcordion)
+                .block-tabs
+                    .container
+                        .row
+                            .col-lg-8
+                                .tabcordion.not-styleLink
+                                    ul.nav.nav-tabs
+                                        li.active: a(href="#", data-toggle="tab", data-target=".messages") О компании
+                                        li: a(href="#", data-toggle="tab", data-target=".home") Отзывы
+                                        li: a(href="#", data-toggle="tab", data-target=".profile") Доставка и оплата
+
+                                    .tab-content
+                                        .messages.active.tab-pane
+                                            p Компания «ДМС Строй» предлагает качественные стройматериалы оптом и в розницу. Наша продукция необходима при проведении строительно-ремонтных работ, а также мероприятий по благоустройству зданий и сооружений.
+                                            p Благодаря нашей компании, у вас есть возможность купить стройматериалы различных типов, оформив единый заказ.  Это позволяет экономить время, которое тратится на выбор подходящей продукции, а также снижает расходы. Заказывая крупную партию товаров, можно рассчитывать на хорошую скидку.
+                                            p Чтобы приобрести строительные материалы в Челябинске, достаточно лишь позвонить по одному из указанных телефонных номеров или заказать обратный звонок. Наши специалисты помогут подсчитать необходимое количество материала и предоставят подробную информацию о каждом типе продукции.
+                                            br
+                                            button.btn.btn-orange Подробнее о компании
+
+                                        .profile.tab-pane.fade
+                                            p Компания «ДМС Строй» предлагает качественные стройматериалы оптом и в розницу. Наша продукция необходима при проведении строительно-ремонтных работ, а также мероприятий по благоустройству зданий и сооружений.
+                                            p Благодаря нашей компании, у вас есть возможность купить стройматериалы различных типов, оформив единый заказ.  Это позволяет экономить время, которое тратится на выбор подходящей продукции, а также снижает расходы. Заказывая крупную партию товаров, можно рассчитывать на хорошую скидку.
+                                            p Чтобы приобрести строительные материалы в Челябинске, достаточно лишь позвонить по одному из указанных телефонных номеров или заказать обратный звонок. Наши специалисты помогут подсчитать необходимое количество материала и предоставят подробную информацию о каждом типе продукции.
+                                        .home.tab-pane.fade
+                                            p Компания «ДМС Строй» предлагает качественные стройматериалы оптом и в розницу. Наша продукция необходима при проведении строительно-ремонтных работ, а также мероприятий по благоустройству зданий и сооружений.
+                                            br
+                                            button.btn.btn-orange Подробнее о компании
+
+
+                            .col-lg-4.hidden-md-down
+                                br
+                                br
+                                +img('content/inner')
+            - if(!category)
+                .block-blue
+                    .container
+                        .category-list.not-styleLink
+                            .category-list__section
+                                ul.category-list__item
+                                    li: a(href="#") Кирпич лицевой керамический
+                                    li: a(href="#") Кирпич рядовой керамический
+                                    li: a(href="#") Кирпич полнотелый
+                                    li: a(href="#") Кирпич полнотелый с пустотностью 6%
+                                    li: a(href="#") Кирпич полнотелый с пустотностью 12%
+                                    li: a(href="#") Кирпич пустотелый
+                                    li: a(href="#") Кирпич силикатный
+                            .category-list__section
+                                ul.category-list__item
+                                    li: a(href="#") Арматура
+                                    li: a(href="#") Швеллер
+                                    li: a(href="#") Двутавр
+                                    li: a(href="#") Кровельные материалы
+                                    li: a(href="#") Пеноблок
+                                    li: a(href="#") Газоблок
+                                    li: a(href="#") Шлакоблок
+                            .category-list__section
+                                ul.category-list__item
+                                    li: a(href="#") Технониколь
+                                    li: a(href="#") Эковер
+                                    li: a(href="#") Утеплитель ИЗБА
+                                    li: a(href="#") Плиты перекрытия ПБ
+                                    li: a(href="#") Блоки ФБС
+                                    li: a(href="#") Фундаментная лента
+                                    li: a(href="#") Перемычки железобетонные
+                            .category-list__section
+                                ul.category-list__item
+                                    li: a(href="#") Плиты перекрытия ПК
+                                    li: a(href="#") Лестничные ступени
+                                    li: a(href="#") Опорные подушки
+                                    li: a(href="#") Прогоны ПРГ
+                                    li: a(href="#") Плиты плоские
+
+
             +footer()
 
         +modal()
@@ -50,6 +183,9 @@ html(class="no-js", lang="ru")
         script(src="%=static=%js/separate-js/bootstrap-select.min.js" type="text/javascript")
         script(src="%=static=%js/separate-js/dropdown.js" type="text/javascript")
         script(src="%=static=%js/separate-js/modal.js" type="text/javascript")
+        script(src="%=static=%js/separate-js/tab.js" type="text/javascript")
+        script(src="%=static=%js/separate-js/collapse.js" type="text/javascript")
+        script(src="%=static=%js/separate-js/tabcordion.js" type="text/javascript")
         //- start block script
         block script
         //- end block script
