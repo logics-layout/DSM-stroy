@@ -27,6 +27,23 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, xl)-1) {
+  .pageTitle {
+    padding: 25px 0;
+    &__title {
+      font-size: 30px;
+    }
+  }
+  .calculator-btn{
+    font-size: 14px;
+    &> span {
+      padding-left: 45px;
+      padding-right: 15px;
+      &:before{
+        margin-left: 10px;
+      }
+    }
+  }
+
   .sub-menu {
     padding: 40px 0;
   }
@@ -85,6 +102,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .contacts-list {
+    &__section {
+      width: 50%;
+    }
+  }
+  #yamap{
+    height: 500px;
+  }
+
   .footer {
     &__top{
       padding-left: 0;
@@ -98,8 +124,93 @@ body, html{
       margin-bottom: 20px;
     }
   }
+  .pageTitle {
+    &__title {
+      line-height: normal;
+    }
+  }
+  .header-after {
+    padding: 15px 0;
+    .breadcrumb {
+      > li {
+        > * {
+          line-height: normal;
+        }
+      }
+    }
+  }
   .header{
-    min-width: 1110px;
+    height: 55px;
+    &.active{
+      .header__top{
+        opacity: 1;
+        visibility: visible;
+        &-content{
+          right: 0;
+        }
+      }
+    }
+    &__top{
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding-left: 55px;
+      background-color: rgba(75, 75, 75, 0.68);
+      height: 100vh;
+      line-height: normal;
+      width: 100%;
+      opacity: 0;
+      @include tr;
+      visibility: hidden;
+      &-padding{
+        padding-left: 38px;
+        padding-right: 20px;
+        &_top{
+          padding-top: 15px;
+        }
+      }
+      &-content{
+        height: 100vh;
+        background-color: white;
+        box-shadow: -10px 0 15px rgba(0, 0, 0, 0.15);
+        width: auto;
+        padding: 0;
+        overflow: auto;
+
+        position: relative;
+        right: -100%;
+        @include tr;
+        .btn-sm{
+          padding: 9px 7px;
+        }
+      }
+      &-nav{
+        margin: 0;
+        li{
+          display: block;
+          padding: 0;
+          a{
+            color: #4b4b4b;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            padding: 10px 0;
+            >span{
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    &__download{
+      text-align: left;
+      font-size: 14px;
+      display: block;
+      line-height: 75px;
+    }
+    &__bottom{
+      display: none;
+    }
   }
   .category-list {
     display: block;
@@ -127,6 +238,11 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .header {
+    &__mobile {
+      display: none;
+    }
+  }
   .header{
     height: 137px;
     &.scroll{
@@ -134,16 +250,7 @@ body, html{
         box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
       }
     }
-    .header__content{
-      //position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: white;
-      z-index: 9;
-    }
   }
-
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
@@ -153,6 +260,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  #yamap{
+    height: 400px;
+  }
+  .pageTitle {
+    padding: 15px 0;
+    &__title {
+      font-size: 25px;
+    }
+  }
   hr {
     margin: 35px 0;
   }
@@ -202,6 +318,12 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .pageTitle {
+    padding: 15px 0;
+    &__title {
+      font-size: 22px;
+    }
+  }
   .category-list {
     > * {
       width: 100%;

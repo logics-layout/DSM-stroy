@@ -1,0 +1,84 @@
+extends main
+
+block head
+    - var headData = {title: "Контакты"}
+    - var callbackCategory = true
+    - var tabcordion = true
+    - var category = true
+
+block content
+    .container
+        br
+        br
+        .contacts-list
+            .contacts-list__section
+                p.contacts-list__title Адрес:
+                p.contacts-list__text 454048, Челябинск,&nbsp;
+                    br.hidden-xs-down
+                    |ул. Елькина, 112, офис 29
+            .contacts-list__section
+                p.contacts-list__title Время работы офиса
+                p.contacts-list__text пн-пт 9:00-18:00&nbsp;
+                    br.hidden-xs-down
+                    | приём звонков с 8:00 до 23:00&nbsp;
+                    br.hidden-xs-down
+                    | ежедневно
+            .contacts-list__section.not-styleLink
+                p.contacts-list__title Телефон / факс
+                p.contacts-list__text
+                    a(href="#").color-grey: span.color-grey__title +7 (351) 200 40 18
+                    br
+                    a(href="#").color-grey: span.color-grey__title +7 (351) 200 40 18
+            .contacts-list__section.not-styleLink
+                p.contacts-list__title Эл. почта
+                p.contacts-list__text
+                    a(href="#").color-grey: span.color-grey__title dmsstroy@mail.ru
+        br
+        br
+
+    #yamap
+    .container
+        .row: .col-lg-11
+            br
+            br
+            p Компания "ДМС Строй" занимается оперативным снабжением стройплощадок строительным и отделочным материалом от местных производителей. У нас вы можете заказать кирпич полнотелый керамический рядовой из городов Челябинск, Копейск, Еманжелинск, Екатеринбург, Ревда, Чебаркуль, Миасс. Близость производителя позволяет сократить расходы на транспортировку тяжелых материалов, а налаженные партнерские отношения, направленные на реализацию и сбыт продукции, позволяют назначить доступную цену в 8-14,5 рублей за одинарный и 9,5-16 рублей за полуторный кирпич (в зависимости от производителя).
+
+
+block script
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

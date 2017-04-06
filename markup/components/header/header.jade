@@ -1,21 +1,48 @@
 mixin header(data)
     .header(class!=data).not-styleLink
         .header__content
+            .header__mobile
+                .header__mobile-section.header__mobile-section_btn.header__mobile-section_notBorder(style="line-height: normal;")
+                    .mobile-list-anim
+                        input(type="checkbox", id="header-bottom-toggleMenuMbl")
+                        label.menuTopMobel(for="header-bottom-toggleMenuMbl")
+                            span.menu-mobile
+                                span.menu-mobile-hamburger.one
+                                span.menu-mobile-hamburger.two
+                                span.menu-mobile-hamburger.three
+
+                .header__mobile-section.text-center
+                    a(href="#").header__mobile-phone 8 (351) 200 40 18
+                .header__mobile-section.header__mobile-section_btn
+                    a(href="#").header__mobile-link: +icon('search')
+
+
+
+
             a(href="#").header__logo: +img('assets/header/logo', 'png')
             .header__top
-                .container.header__padding-left
-                    .row
-                        .col-xl-9
-                            ul.header__top-nav
-                                li: a(href="#"): span Наши партнёры
-                                li: a(href="#"): span Отзывы
-                                li: a(href="#"): span Доставка и оплата
-                                li: a(href="#"): span Вопрос и ответ
-                                li: a(href="#"): span Контактная информация
-                        .col-xl-3
-                            a(href="#").header__download
-                                span.header__download-icon: i.s-download
-                                span.header__download-title: span Скачать прайс-лист
+                .container.header__padding-left.header__top-content
+                    a(href="#").header__top-padding.header__top-link.hidden-lg-up Перейти в каталог
+                    .header__top-padding.header__top-padding_top
+                        .row
+                            .col-lg-9
+                                ul.header__top-nav
+                                    li.hidden-lg-up: a(href="#"): span Спецпредложения
+                                    li.hidden-lg-up: a(href="#"): span Наши объекты
+                                    li: a(href="#"): span Наши партнёры
+                                    li: a(href="#"): span Отзывы
+                                    li: a(href="#"): span Доставка и оплата
+                                    li: a(href="#"): span Вопрос и ответ
+                                    li.hidden-md-down: a(href="#"): span Контактная информация
+                                    li.hidden-lg-up: a(href="#"): span Контакы
+                            .col-lg-3
+                                .hidden-lg-up
+                                    br
+                                a(href="#").header__download
+                                    span.header__download-icon: i.s-download
+                                    span.header__download-title: span Скачать прайс-лист
+                                div.hidden-lg-up
+                                    button.btn.btn-blue.btn-sm(data-toggle="modal" data-target="#modal-callback") Отправить заявку
             .header__bottom
                 .container.header__padding-left
                     .header__table

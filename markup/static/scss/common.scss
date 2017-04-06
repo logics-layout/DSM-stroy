@@ -20,7 +20,7 @@ html, body {
 
 .page__wrapper {
   min-height: 100%;
-  padding-bottom: 85px;
+  padding-bottom: 40px;
 
 }
 * html .page__wrapper {
@@ -116,3 +116,106 @@ html, body {
     }
   }
 }
+
+.header-after{
+  background-color: #f6f8fa;
+  .breadcrumb {
+    margin: 0;
+    > li {
+      > * {
+        line-height: 85px;
+      }
+    }
+  }
+  &__search{
+    position: relative;
+    &-input{
+      border: 1px solid #818181;
+      border-bottom: none;
+      border-top: none;
+      width: 100%;
+      outline: none;
+      padding: 0 28px;
+      font-size: 18px;
+      background-color: transparent;
+      @include placeholder(#1a1a1a);
+      height: 85px;
+      padding-right: 60px;
+    }
+    &-btn{
+      @include btn-clear;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 0;
+      padding-right: 31px;
+      fill: #1a1a1a;
+      svg{
+        display: inline-block;
+        margin-bottom: -4px;
+      }
+      &:hover{
+        fill: $mainColor;
+      }
+    }
+  }
+}
+
+.pageTitle{
+  border-bottom: 1px solid #cacaca;
+  padding: 33px 0;
+  &__title{
+    color: #4d5162;
+    font-size: 35px;
+    line-height: 55px;
+    font-weight: 700;
+    margin: 0;
+  }
+}
+
+#yamap{
+  width: 100%;
+  height: 710px;
+}
+
+.contacts-list{
+  font-size: 0;
+  margin: -15px;
+  &__section{
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    padding: 15px;
+  }
+  &__title{
+    color: #e65711;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  &__text{
+    color: #6a6a6a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,23 +1,21 @@
-// var _fnMenuHeaderTop = function(toggle, list, slide) {
-//     var className, el, time;
-//     time = 300;
-//     el = toggle.closest('.mobile-list-anim');
-//     className = 'active';
+var _fnMenuHeaderTop = function(toggle, list, slide) {
+    var className, el, time;
+    time = 300;
+    el = toggle.closest('.mobile-list-anim');
+    className = 'active';
+
+    if (toggle.prop("checked")) {
+        el.add(list).addClass(className);
+    } else {
+        el.add(list).removeClass(className);
+    }
+};
 //
-//     if (toggle.prop("checked")) {
-//         if(slide) list.stop().slideDown(time);
-//         el.add(list).addClass(className);
-//     } else {
-//         if(slide) list.stop().slideUp(time);
-//         el.add(list).removeClass(className);
-//     }
-// };
+var menuHeaderTopToggle = $('#header-bottom-toggleMenuMbl');
+var menuHeaderTopList = $('.header');
 //
-// var menuHeaderTopToggle = $('#header-bottom-toggleMenuMbl');
-// var menuHeaderTopList = $('.header-bottom-nav');
-//
-// menuHeaderTopToggle.change(function() {_fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);});
-// _fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);
+menuHeaderTopToggle.change(function() {_fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);});
+_fnMenuHeaderTop(menuHeaderTopToggle, menuHeaderTopList, true);
 // $(document).click(function(e) {
 //     var target;
 //     target = $(e.target);

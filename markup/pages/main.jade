@@ -22,12 +22,32 @@ html(class="no-js", lang="ru")
         section.page__wrapper
             +header(index)
             -if(!breadcrumb)
-                .container
-                    br
-                    br
-                    ul.breadcrumb.not-styleLink
-                        li: a(href="#"): span Главная
-                        li: span О компании
+                .header-after
+                    .container
+                        .row
+                            .col-lg-8.col-xs-12
+                                ul.breadcrumb.not-styleLink
+                                    li: a(href="#"): span Главная
+                                    - if(headData)
+                                        li.active: span= headData.title
+                                    - else
+                                        li.active: span= head.defaults.title
+                            .col-lg-4.hidden-md-down
+                                .header-after__search
+                                    input(placeholder="Поиск по каталогу").header-after__search-input
+                                    button.header-after__search-btn: +icon('search', 'svg-search', 20, 20)
+
+                .pageTitle
+                    .container
+                        .row
+                            .col-lg-8.col-xs-12
+                                - if(headData)
+                                    p.pageTitle__title= headData.title
+                                - else
+                                    p.pageTitle__title= head.defaults.title
+                            .col-lg-4.hidden-md-down
+                                a(href='#').calculator-btn.not-styleLink: span Расчёт кирпичной кладки
+
 
             //- Include your components here
             //- start block content
