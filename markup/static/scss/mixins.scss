@@ -47,6 +47,26 @@
   //rgb(red($color), green($color), blue($color));
 }
 
+@mixin text-border-bottom($name, $color){
+  .color-#{$name}{
+    color: $color;
+    &__title{
+      border-bottom: 1px solid transparent;
+      &_viewBorder{
+        border-bottom-color: rgba(red($color), green($color), blue($color), 0.3);
+      }
+      &_dotted{
+        border-bottom-style: dotted;
+      }
+    }
+    &:hover{
+      .color-#{$name}__title{
+        border-bottom-color: rgba(red($color), green($color), blue($color), 0.6);
+      }
+    }
+  }
+}
+
 @mixin link-border-color($color){
   border-bottom: 1px solid rgba(red($color), green($color), blue($color), 0.3);
   &:focus{

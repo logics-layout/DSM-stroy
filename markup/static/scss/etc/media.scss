@@ -85,7 +85,22 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
-
+  .footer {
+    &__top{
+      padding-left: 0;
+    }
+    &__bottom{
+      text-align: center;
+    }
+    &__logo{
+      margin: 0 auto;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+  .header{
+    min-width: 1110px;
+  }
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xs)) {
@@ -103,13 +118,17 @@ body, html{
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
   .header{
     height: 137px;
+    &.scroll{
+      .header__content {
+        box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
+      }
+    }
     .header__content{
-      position: fixed;
+      //position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       background-color: white;
-      //box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
     }
   }
 
@@ -122,9 +141,80 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .footer {
+    &__table{
+      display: block;
+      font-size: 0;
+      text-align: center;
+      width: 100%;
+      margin: -20px 0;
+      &-cell{
+        display: inline-block;
+        width: 50%;
+        padding: 20px 0;
+      }
+    }
+    &__iconBlock{
+      margin: 0 auto;
+      &_addres{
+        >*{
+          +*{
+            padding-left: 25px;
+          }
+        }
+      }
+      &_phone{
+
+        >*{
+          +*{
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+
 
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .footer {
+    &__table{
+      margin: -10px 0;
+      &-cell{
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+    &__iconBlock{
+      margin: 0;
+      &-icon{
+        width: 50px;
+      }
+      &-title{
+        padding-left: 10px;
+      }
+    }
+    &__logo{
+      display: block;
+      text-align: center;
+      >*{
+        display: block;
+        +*{
+          padding-left: 0;
+          padding-top: 10px;
+        }
+      }
+    }
+    &__bottom{
+      padding-bottom: 0;
+    }
+    .copyright{
+      background: #f9f9f9;
+      margin: 0 -15px;
+      display: block;
+      padding: 23px 15px;
+    }
+  }
 
 }

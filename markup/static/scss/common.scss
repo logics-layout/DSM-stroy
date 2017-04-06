@@ -7,6 +7,7 @@ html, body {
   font-size: 14px;
   font-weight: 400;
   line-height: 28px;
+  background-color: #eee;
 }
 
 .container{
@@ -35,4 +36,18 @@ body {
   //padding-top: 90px;
 }
 
-
+.copyright{
+  display: inline-block;
+  font-size: 0;
+  color: #282528;
+  line-height: 25px;
+  text-align: left;
+  >*{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    +*{
+      padding-left: 30px;
+    }
+  }
+}

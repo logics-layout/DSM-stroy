@@ -44,36 +44,3 @@
 //             .find('ul').slideUp(time);
 //     }
 // });
-//
-// //
-// var header = $('.header'),
-//     headerBottomFix = $('.header-bottom-fix'),
-//     checkPad = true;
-//
-// window.headerHeight = _heightBlock(header);
-// var checkHeaderFix = function(){
-//     // return false;
-//
-//     if($(window).width() < 991){
-//
-//         if($(window).scrollTop() > headerBottomFix.offset().top){
-//             header.addClass('fix');
-//         }else{
-//             header.removeClass('fix');
-//         }
-//
-//         //     if(checkPad){
-//         //         header.addClass('fix');
-//         //         header.css({marginTop: "-"+headerHeight+"px"}).animate({marginTop: "0"}, 500);
-//         //         page__wrapper.css('padding-top', headerHeight+"px");
-//         //         checkPad = false;
-//         //     }
-//         // }else if(checkPad===false){
-//         //     checkPad = true;
-//         //     header.removeClass('fix');
-//         //     page__wrapper.css('padding-top', 0+"px");
-//         //     $('.header-slider-el').slick('slickNext');
-//         //     window.headerHeight = _heightBlock(header);
-//         // }
-//     }
-// };

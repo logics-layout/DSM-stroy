@@ -2,19 +2,17 @@ mixin header(data)
     .header(class!=data).not-styleLink
         .header__content
             a(href="#").header__logo: +img('assets/header/logo', 'png')
-
-
             .header__top
                 .container.header__padding-left
                     .row
-                        .col-lg-9
+                        .col-xl-9
                             ul.header__top-nav
                                 li: a(href="#"): span Наши партнёры
                                 li: a(href="#"): span Отзывы
                                 li: a(href="#"): span Доставка и оплата
                                 li: a(href="#"): span Вопрос и ответ
                                 li: a(href="#"): span Контактная информация
-                        .col-lg-3
+                        .col-xl-3
                             a(href="#").header__download
                                 span.header__download-icon: i.s-download
                                 span.header__download-title: span Скачать прайс-лист

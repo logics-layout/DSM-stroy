@@ -1,7 +1,42 @@
 mixin footer(data)
     footer.footer.not-styleLink
         .container
+            .footer__top
+                .footer__table
+                    .footer__table-cell
+                        .footer__iconBlock.footer__iconBlock_addres
+                            .footer__iconBlock-icon: +icon('label')
+                            .footer__iconBlock-title г. Челябинск
+                                br
+                                |ул. Елькина, дом 112, офис 28
+                    .footer__table-cell
+                        .footer__iconBlock.footer__iconBlock_phone
+                            .footer__iconBlock-icon: +icon('phone')
+                            .footer__iconBlock-title
+                                a(href='#').color-block: span.color-block__title +7 (351) 200-40-18
+                                br
+                                a(href='#').color-block: span.color-block__title +7 (909) 069 14 60
+                    .footer__table-cell
+                        a(href="#").footer__iconBlock.color-block
+                            span.footer__iconBlock-icon: i.s-vk
+                            span.footer__iconBlock-title: span.color-block__title Мы вконтакте
 
+
+            .footer__bottom
+                .row
+                    .col-lg-8
+                        a(href='#').footer__logo
+                            span.footer__logo-img: +img('/assets/footer/logo', 'png')
+                            span.footer__logo-text Комплектация объектов стройматериалами&nbsp;
+                                br.hidden-xs-down
+                                |© 2013 - 2017 ООО «ДМС-Строй»
+
+                    .col-lg-4
+                        a(href="#").copyright.color-block
+                            .copyright__title: span.color-block__title Разработка
+                                br
+                                |и продвижение сайта —
+                            .copyright__logo: i.s-insite
 
 
 
