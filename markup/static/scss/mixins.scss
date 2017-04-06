@@ -58,6 +58,9 @@
       &_dotted{
         border-bottom-style: dotted;
       }
+      &_dashed{
+        border-bottom-style: dashed;
+      }
     }
     &:hover{
       .color-#{$name}__title{

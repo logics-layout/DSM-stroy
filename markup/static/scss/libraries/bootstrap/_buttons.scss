@@ -115,6 +115,9 @@ a.btn {
 .btn-orange{
   @include button-variant(#fff, $orange);
 }
+.btn-orangeTwo{
+  @include button-variant(#fff, #f16823);
+}
 
 // Link buttons
 // -------------------------

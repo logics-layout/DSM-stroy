@@ -189,24 +189,31 @@ try{
     ymaps.ready(initYmaps);
 }catch (e){}
 
-// $('.catalog-category-list a').click(function(e){
-//     var _this = $(this),
-//         list = _this.next('ul'),
-//         parent = _this.parent(),
-//         className = 'active',
-//         time = 300;
-//
-//     if(list[0]){
-//         e.preventDefault();
-//         parent.toggleClass(className);
-//         list.slideToggle(time);
-//
-//         parent.siblings().removeClass(className)
-//             .find('li').removeClass(className)
-//             .end()
-//             .find('ul').slideUp(time);
-//     }
-// });
+$('.catalogList a').click(function(e){
+    var _this = $(this),
+        list = _this.next('ul'),
+        parent = _this.parent(),
+        className = 'active',
+        time = 300;
+
+    if(list[0]){
+        e.preventDefault();
+        parent.toggleClass(className);
+        list.slideToggle(time);
+
+        parent.siblings().removeClass(className)
+            .children('li').removeClass(className)
+            .end()
+            .find('ul').slideUp(time);
+    }
+});
+
+$('.btnToggle').click(function () {
+    var _this = $(this),
+        block = $(_this.data('block'));
+    $(this).addClass('active');
+    block.stop().slideToggle(300);
+});
 
 
 // $('.collapse').find('.collapse-toggle').click(function(e){

@@ -1,74 +1,78 @@
 .item{
+  background-color: white;
+  border: 1px solid #cacaca;
   display: block;
-  border: 1px solid #dadada !important;
-  background-color: #fff;
-  border-radius: 4px;
-  //box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
-  color: #6e6f78;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 22px;
-  overflow: hidden;
-  &-col{
-    padding: 30px 26px;
-    min-height: 389px;
-    .item-img{
-      height: 190px;
-      line-height: 190px;
-      margin-bottom: 10px;
-    }
-    >span{
-      display: block;
-    }
-  }
-  &-block{
-    //padding: 0 25px;
-    padding: 25px 15px;
-    display: table;
-    +.item{
-      margin-top: 9px;
-    }
-    .item-img{
-      width: 150px;
-      padding: 0 !important;
-    }
-    >span{
-      display: table-cell;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  @include tr;
+  &__features{
+    font-size: 0;
+    margin: 5px -12px;
+    >*{
+      display: inline-block;
       vertical-align: middle;
-      padding: 0 15px;
-      >span{
-        display: block;
+      padding: 0 12px;
+      font-size: 13px;
+      b{
+        font-size: 16px;
       }
     }
   }
-  &:hover{
-    border: 2px solid #dadada;
-    box-shadow: 0 8px 9px rgba(0, 0, 0, 0.1);
-    .item-title{
-      span{
-        border-bottom-color: transparent;
-      }
-    }
-  }
-  &-img{
-    //text-align: center;
+  &__img{
+    height: 150px;
+    line-height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
     img{
       display: inline-block;
       max-height: 100%;
+      max-width: 80%;
     }
   }
-  &-title{
-    color: #0180bb;
+  &__title{
     font-size: 16px;
-    font-weight: 600;
-    line-height: 26px;
-    //text-decoration: underline;
-    margin-bottom: 14px;
-    span{
-      @include link-border-color(#0180bb);
-      display: inline;
+    line-height: 25px;
+    height: 47px;
+    overflow: hidden;
+  }
+  &__title-sub{
+    color: #848484;
+    font-size: 13px;
+    margin-bottom: 5px;
+    height: 28px;
+    overflow: hidden;
+  }
+  &__btn{
+    @include btn-clear;
+    border: 1px solid #e65711;
+    color: #f16823;
+    font-size: 15px;
+    font-weight: 700;
+    height: 45px;
+    width: 145px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin-top: 10px;
+    &:hover{
+      background-color: #e65711;
+      color: #fff;
     }
   }
-  &-text{
+  &:hover{
+    box-shadow: 0 15px 15px rgba(47, 47, 47, 0.15);
+    border-color: transparent;
+  }
+}
+
+.item-list{
+  font-size: 0;
+  margin: -15px;
+  &__section{
+    outline: none;
+    display: inline-block;
+    width: 33.33%;
+    font-size: 14px;
+    padding: 15px;
   }
 }

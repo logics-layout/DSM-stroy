@@ -1,0 +1,122 @@
+extends catalog-main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "Кирпич полнотелый"}
+
+block catalog-content
+    .hidden-lg-up
+        button.btn.btn-blue.btn-ttu.btn-width.btnToggle(data-block="#dsfsdfsdf") Фильтр
+
+    .btnToggle-el#dsfsdfsdf
+        .hidden-lg-up
+            br
+        .filter-table
+            .filter-table__cell
+                p.filter-title: b.color-grey Выберите производителя:
+
+                .label-list
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Екатеринбург
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Миасс
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span ОАО «КЕММА»
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span ООО "Еманжелинский кирпичный завод"
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span ООО "Кирпичный завод №3"
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span ООО "Ревдинский керамический завод"
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span ООО "Уралглавкерамика"
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Чебаркуль
+            .filter-table__cell
+                p.filter-title: b.color-grey Формат:
+
+                .label-list
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Кирпич одинарный
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Кирпич утолщённый
+                br
+                p.filter-title: b.color-grey Вид:
+                .label-list
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span Кирпич полнотелый
+            .filter-table__cell
+                p.filter-title: b.color-grey Формат:
+
+                .label-list
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span M175
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span M200
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span М125
+                    label.label-list__item
+                        span.label-list__item-cell: input(type="checkbox")
+                        span.label-list__item-cell: span М150
+                br
+                p.filter-title: a(href="#").not-styleLink.color-block-two: span.color-block-two__title.color-block-two__title_dashed.color-block-two__title_viewBorder Очистить фильтр
+                button.btn.btn-orangeTwo Применить фильтр
+    br.hidden-md-down
+    br
+    .item-list
+        -for(var i = 0; i<6; i++)
+            .item-list__section
+                +item(i)
+
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

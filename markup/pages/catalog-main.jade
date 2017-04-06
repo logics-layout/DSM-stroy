@@ -1,0 +1,82 @@
+extends main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "Кирпич полнотелый"}
+
+block content
+    .container
+        .catalog-content
+            .catalog-content__left
+
+                .hidden-lg-up
+                    br
+                    button.btn.btn-orange.btn-ttu.btn-width.btnToggle(data-block=".catalogList") Каталог продукции
+
+                .catalogList.not-styleLink.btnToggle-el
+                    ul
+                        li.open.parent.active
+                            a(href="#") Кирпич
+                            ul
+                                li.active: a(href="#"): span Рядовой керамический
+                                li: a(href="#"): span Лицевой керамический
+                                li: a(href="#"): span Силикатный
+
+                        li.parent
+                            a(href="#") Керамические блоки
+                            ul
+                                li: a(href="#"): span Рядовой керамический
+                                li: a(href="#"): span Лицевой керамический
+                                li: a(href="#"): span Силикатный
+                        li: a(href="#") Стеновые блоки
+                        li: a(href="#") ЖБИ
+                        li: a(href="#") Теплоизоляция
+                        li: a(href="#") Бетон
+                        li: a(href="#") Сыпучие материалы
+                        li: a(href="#") Каменный уголь
+                        li: a(href="#") Металлопрокат
+                br
+
+            .catalog-content__right
+                block catalog-content
+
+                br
+                br
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

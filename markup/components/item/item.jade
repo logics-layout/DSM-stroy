@@ -1,7 +1,22 @@
-mixin item(num)
+mixin item(num, key)
     - num = num || 0;
+    - key = key || 'list';
     - var rowItem = {}
-    - if(item.list[num])
-        - rowItem = item.list[num]
+    - if(item[key][num])
+        - rowItem = item[key][num]
     - else
-        - rowItem = item.list[0]
+        - rowItem = item[key][0]
+
+    a(href="#").item.not-styleLink.color-block-two
+        span.db.item__img: +img(rowItem.img)
+        span.db.item__title: b.color-block-two= rowItem.title
+        span.db.item__title-sub= rowItem.titleSub
+        - if(rowItem.features)
+            span.db.item__features
+                - for(var i = 0; i < rowItem.features.length; i++)
+                    span.item__features-section
+                        b.color-block-two=rowItem.features[i].num
+                        |&nbsp;
+                        span= rowItem.features[i].desc
+
+        button.item__btn Заказать
