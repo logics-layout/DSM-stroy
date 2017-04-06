@@ -46,7 +46,10 @@ html(class="no-js", lang="ru")
                                 - else
                                     p.pageTitle__title= head.defaults.title
                             .col-lg-4.hidden-md-down
-                                a(href='#').calculator-btn.not-styleLink: span Расчёт кирпичной кладки
+                                - if(otvet)
+                                    a(href='#').calculator-btn.calculator-btn_otvet.not-styleLink: span Задать вопрос
+                                - else
+                                    a(href='#').calculator-btn.not-styleLink: span Расчёт кирпичной кладки
 
 
             //- Include your components here
@@ -57,6 +60,32 @@ html(class="no-js", lang="ru")
 
             .page__buffer
         .page__footer
+
+            - if(callbackTwo)
+                .callbackTwo
+                    .container
+                        .row
+                            .col-lg-5
+                                p.callbackTwo__title Задайте свой вопрос
+                            .col-lg-7
+                                p.callbackTwo__title-sub Звездочкой * отмечены поля, обязательные для заполнения
+                        br.hidden-xs-down
+                        br
+                        .row
+                            .col-lg-5
+                                .form-group.form-group_two
+                                    input(placeholder="Контактное лицо").form-control.form-control_white
+                                .form-group.form-group_required.form-group_two
+                                    input(placeholder="Телефон").form-control.form-control_white
+                                .form-group.form-group_two
+                                    input(placeholder="Эл. почта").form-control.form-control_white
+                            .col-lg-7
+                                .form-group.form-group_required.form-group_two
+                                    textarea(placeholder="Введите текст вашего вопроса", style="height: 150px;").form-control.form-control_white
+                                .row: .col-lg-7
+                                    .form-group.form-group_two
+                                        button.btn.btn-white.btn-border.btn-width.btn-input Отправить заявку
+
 
             - if(!callback)
                 .callback

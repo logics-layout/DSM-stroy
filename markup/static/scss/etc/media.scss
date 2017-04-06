@@ -34,12 +34,14 @@ body, html{
     }
   }
   .calculator-btn{
-    font-size: 14px;
-    &> span {
-      padding-left: 45px;
-      padding-right: 15px;
-      &:before{
-        margin-left: 10px;
+    &:not(.calculator-btn_otvet){
+      font-size: 14px;
+      &> span {
+        padding-left: 45px;
+        padding-right: 15px;
+        &:before{
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -318,6 +320,44 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .callbackTwo {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    &__title {
+      font-size: 24px;
+      &-sub {
+        font-size: 14px;
+        padding-top: 8px;
+      }
+    }
+  }
+  .form-group {
+    &_two{
+      margin-bottom: 20px;
+    }
+    &_required{
+      &:after{
+        right: 14px;
+        top: 16px;
+      }
+      .form-control{
+        padding-right: 30px;
+      }
+    }
+  }
+  .panel-body {
+    padding: 20px 19px;
+  }
+  .panel-title {
+    padding-left: 19px;
+    padding-right: 43px;
+    &:after{
+      right: 15px;
+    }
+  }
+  .panel-group .panel + .panel {
+    margin-top: 15px;
+  }
   .pageTitle {
     padding: 15px 0;
     &__title {

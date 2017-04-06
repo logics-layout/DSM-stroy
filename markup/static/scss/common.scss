@@ -206,6 +206,26 @@ html, body {
   }
 }
 
+.callbackTwo{
+  background-size: cover;
+  background-position: center;
+  background-image: url('%=static=%content/callbackTwo-bg.jpg');
+  color: white;
+  padding-bottom: 50px;
+  padding-top: 55px;
+  &__title{
+    font-size: 35px;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0;
+    &-sub{
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0;
+      padding-top: 17px;
+    }
+  }
+}
 
 
 

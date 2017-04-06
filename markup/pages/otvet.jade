@@ -1,0 +1,74 @@
+extends main
+
+block head
+    - var headData = {title: "Вопрос и ответ"}
+    - var callback = true
+    - var otvet = true
+    - var callbackTwo = true
+
+block content
+    br
+    .container
+        .panel-group.not-styleLink#accordion
+            .panel.panel-default
+                .panel-heading
+                    a(href="#" data-toggle="collapse" data-parent="#accordion" data-target="#rrrrrrrr-2" class="panel-title collapse") Подскажите сколько необходимо кирпича для строительства дома размером 12м*9м*3,5м?
+                div(class="panel-collapse collapse" id="rrrrrrrr-2")
+                    .panel-body
+                        | Многие заводы производители реализуют кирпич, указывая цену за условную штуку. За условную штуку принимается одна физическая штука одинарного кирпича размером 250*120*65 мм. Для перевода цены за физическую штуку утолщенного кирпича размером 250*120*88 необходимо цену за условную штуку умножить на коэффициент 1,35.
+            .panel.panel-default.active
+                .panel-heading
+                    a(href="#" data-toggle="collapse" data-parent="#accordion" data-target="#rrrrrrrr-1" class="panel-title collapse in").active В Вашем прайсе на кирпич указаны две цены: за условную и физическую штуку. Для чего это сделано?
+                div(class="active panel-collapse collapse in" id="rrrrrrrr-1")
+                    .panel-body
+                        | Многие заводы производители реализуют кирпич, указывая цену за условную штуку. За условную штуку принимается одна физическая штука одинарного кирпича размером 250*120*65 мм. Для перевода цены за физическую штуку утолщенного кирпича размером 250*120*88 необходимо цену за условную штуку умножить на коэффициент 1,35.
+            .panel.panel-default
+                .panel-heading
+                    a(href="#" data-toggle="collapse" data-parent="#accordion" data-target="#rrrrrrrr-3" class="panel-title collapse") Делаете ли вы доставку в г.Аша. Интересует 45 куб.м. газоблока ИНСИ
+                div(class="panel-collapse collapse" id="rrrrrrrr-3")
+                    .panel-body
+                        | Многие заводы производители реализуют кирпич, указывая цену за условную штуку. За условную штуку принимается одна физическая штука одинарного кирпича размером 250*120*65 мм. Для перевода цены за физическую штуку утолщенного кирпича размером 250*120*88 необходимо цену за условную штуку умножить на коэффициент 1,35.
+            .panel.panel-default
+                .panel-heading
+                    a(href="#" data-toggle="collapse" data-parent="#accordion" data-target="#rrrrrrrr-4" class="panel-title collapse") Можете ли вы организовать доставку небольшого количества пеноблока для строительства гаража ?
+                div(class="panel-collapse collapse" id="rrrrrrrr-4")
+                    .panel-body
+                        | Многие заводы производители реализуют кирпич, указывая цену за условную штуку. За условную штуку принимается одна физическая штука одинарного кирпича размером 250*120*65 мм. Для перевода цены за физическую штуку утолщенного кирпича размером 250*120*88 необходимо цену за условную штуку умножить на коэффициент 1,35.
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

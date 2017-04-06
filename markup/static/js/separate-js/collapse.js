@@ -46,6 +46,10 @@
   Collapse.prototype.show = function () {
     if (this.transitioning || this.$element.hasClass('in')) return
 
+  // console.log()
+
+
+
     var activesData
     var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
 
@@ -73,6 +77,7 @@
     this.$trigger
       .removeClass('collapsed')
       .attr('aria-expanded', true)
+      .addClass('active')
 
     this.transitioning = 1
 
@@ -85,9 +90,12 @@
         .trigger('shown.bs.collapse')
     }
 
+    this.$element.closest('.panel').addClass('active')
     if (!$.support.transition) return complete.call(this)
 
     var scrollSize = $.camelCase(['scroll', dimension].join('-'))
+
+
 
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
@@ -113,6 +121,7 @@
     this.$trigger
       .addClass('collapsed')
       .attr('aria-expanded', false)
+      .removeClass('active')
 
     this.transitioning = 1
 
@@ -124,7 +133,9 @@
         .trigger('hidden.bs.collapse')
     }
 
+    this.$element.closest('.panel').removeClass('active')
     if (!$.support.transition) return complete.call(this)
+
 
     this.$element
       [dimension](0)
