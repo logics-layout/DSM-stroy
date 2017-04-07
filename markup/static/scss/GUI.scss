@@ -106,21 +106,21 @@ hr{
 }
 
 
-//ul{
-//  //@include nl;
-//  list-style-image: url("%=static=%general/list-style-image.png");
-//  padding: 0;
-//  list-style-position: outside;
-//  padding-left: 81px;
-//  margin: 15px 0;
-//  li{
-//    padding: 5px 0;
-//  }
-//}
+ul{
+  //@include nl;
+  list-style-image: url("%=static=%general/list-style-image.png");
+  padding: 0;
+  list-style-position: outside;
+  padding-left: 27px;
+  //margin: 15px 0;
+  li{
+    padding: 1px 0;
+  }
+}
 
 b{
   font-weight: 700;
-  color: #292a3c;
+  color: #282528;
 }
 
 .tableWrap{
@@ -135,48 +135,39 @@ b{
 
 table{
   font-size: 14px;
-  &:not(.not_style_default){
-    @extend .table;
-    @extend .table-striped;
-    @extend .table-bordered;
-  }
-
-  tbody > tr{
-    color: #4b4b4b;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 26px;
-    &:hover, &.active{
-      td{
-        background-color: #f0f1f2;
-        //color: #070707;
+  line-height: normal;
+  width: 100%;
+  thead{
+    color: #f16823;
+    >tr{
+      >th{
+        padding-top: 5px;
+        padding-bottom: 18px;
       }
     }
   }
 
-  &.table-two{
-    thead > tr > th{
-      background-color: transparent;
-      color: #4b4b4b;
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 40px;
-      border-bottom: 1px solid #f0f1f2;
-      padding: 3px 27px;
-    }
-    tbody > tr{
-      td{
-        color: #7f7f7f;
-        border-bottom: none;
-      }
-      &:hover, &.hover{
-        td{
-          background-color: transparent;
-          //color: #070707;
+  tbody{
+    color: #6a6a6a;
+    >tr{
+      &:nth-of-type(2n-1){
+        >td{
+          background-color: #f4f4f4;
         }
       }
+      >td{
+        padding-top: 11px;
+        padding-bottom: 11px;
+      }
     }
   }
+
+  tr{
+    td, th{
+      padding: 0 10px;
+    }
+  }
+
 }
 
 .db{

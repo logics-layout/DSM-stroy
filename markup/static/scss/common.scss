@@ -251,11 +251,37 @@ html, body {
       border-left: 1px solid #cacaca;
       //margin-left: -1px;
       padding: 25px 29px;
+      .table-block{
+        margin-left: -29px;
+        table{
+          >tbody, >thead{
+            >tr{
+              >td, >th{
+                &:nth-of-type(1){
+                  padding-left: 29px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
 
-
+.video{
+  &__big{
+    height: 330px;
+    background-color: #e6e6e6;
+  }
+  &__small{
+    height: 150px;
+    background-color: #e6e6e6;
+    +.video__small{
+      margin-top: 30px;
+    }
+  }
+}
 
 
 
