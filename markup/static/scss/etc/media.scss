@@ -163,6 +163,15 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .detail {
+    &__table {
+      &-cell {
+        + * {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
   .hr-catalog-content {
     margin-left: -15px;
     margin-right: -15px;
@@ -364,6 +373,32 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .detail-content{
+    display: block;
+    &__cell{
+      display: block;
+      +*{
+        padding-left: 0;
+        padding-top: 15px;
+      }
+      &_img{
+        width: auto;
+      }
+    }
+  }
+  .detail{
+    &__table{
+      display: block;
+      &-cell{
+        display: block;
+        +*{
+          padding-left: 0;
+          padding-top: 15px;
+        }
+      }
+    }
+  }
+
   .item-list {
     &__section {
       width: 50%;

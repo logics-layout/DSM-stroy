@@ -1,0 +1,111 @@
+extends catalog-main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "Кирпич одинарный полнотелый М1150"}
+
+block catalog-content
+    .detail
+        .detail-content
+            .detail-content__cell.detail-content__cell_img
+                .detail__img: +img('content/detail__item')
+            .detail-content__cell
+                p.detail__text
+                    b 7.50&nbsp;&nbsp;&nbsp;
+                    span руб./усл.шт
+                p.detail__text
+                    b 7.50&nbsp;&nbsp;&nbsp;
+                    span руб./физ.шт
+                p.detail__text
+                    b 250.00&nbsp;&nbsp;&nbsp;
+                    span руб./поддон
+
+                button.btn.btn-orange(style="width: 195px;max-width: 100%;") Заказать
+    br
+    .detail__title Характеристики:
+    .detail__table
+        .detail__table-cell
+            .table-block
+                table
+                    thead
+                        tr
+                            th Общие
+                            th
+                    tbody
+                        tr
+                            td Производитель:
+                            td ООО «Кирпичный завод №3»
+                        tr
+                            td Вид:
+                            td полнотелый
+                        tr
+                            td Формат:
+                            td Кирпич одинарный
+                        tr
+                            td Марка:
+                            td М125
+        .detail__table-cell
+            .table-block
+                table
+                    thead
+                        tr
+                            th Транспортные
+                            th
+                    tbody
+                        tr
+                            td Колличество в поддоне усл. шт.:
+                            td 336
+                        tr
+                            td Колличество в поддоне физ. шт.:
+                            td 336
+                        tr
+                            td Колличество в машине (20тн) усл.шт.:
+                            td 5736
+                        tr
+                            td Колличество в машине (20тн) физ.шт.:
+                            td 5736
+
+    br
+    h2 Похожие товары:
+    .item-list-slider
+        -for(var i = 0; i<12; i++)
+            .item-list-slider__section
+                +item(i)
+
+block script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
