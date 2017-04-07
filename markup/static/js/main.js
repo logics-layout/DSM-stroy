@@ -62,6 +62,63 @@ if ($.fn.slick) {
         // autoplaySpeed: 3000,
         // adaptiveHeight: true,
     });
+
+    $('.index-slider__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        prevArrow: $('.index-slider__slider-btn .slick-prev'),
+        nextArrow: $('.index-slider__slider-btn .slick-next'),
+    });
+
+    $('.index-categoryList__item-img').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        // adaptiveHeight: true,
+    });
+
+    $('.partners-list').slick({
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        dots: false,
+        arrows: true,
+        prevArrow: "<button class='slick-prev slick-arrow'></button>",
+        nextArrow: "<button class='slick-next slick-arrow'></button>",
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    dots: true,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 586,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    dots: true,
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 488,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    dots: true,
+                    arrows: false
+                }
+            },
+        ]
+    });
 //
     $('.item-list-slider').slick({
         slidesToShow: 3,
@@ -169,7 +226,7 @@ try{
     ymaps.ready(initYmaps);
 }catch (e){}
 
-$('.catalogList a').click(function(e){
+$('.catalogList a, .index-slider__category-list a').click(function(e){
     var _this = $(this),
         list = _this.next('ul'),
         parent = _this.parent(),

@@ -8,21 +8,223 @@ block head
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
 
 block content
+    .index-slider
+        .index-slider__category.not-styleLink
+            .index-slider__category-list
+                ul
+                    li.active.open
+                        a(href='#'): span.color-white: span.color-white__title Кирпич
+                        ul
+                            li: a(href="#").color-white: span.color-white__title Рядовой керамический
+                            li: a(href="#").color-white: span.color-white__title Лицевой керамический
+                            li: a(href="#").color-white: span.color-white__title Силикатный
+
+                    li
+                        a(href='#'): span.color-white: span.color-white__title Керамические блоки
+                        ul
+                            li: a(href="#").color-white: span.color-white__title Рядовой керамический
+                            li: a(href="#").color-white: span.color-white__title Лицевой керамический
+                            li: a(href="#").color-white: span.color-white__title Силикатный
+                    li: a(href='#'): span.color-white: span.color-white__title Стеновые блоки
+                    li: a(href='#'): span.color-white: span.color-white__title ЖБИ
+                    li: a(href='#'): span.color-white: span.color-white__title Теплоизоляция
+                    li: a(href='#'): span.color-white: span.color-white__title Бетон
+                    li: a(href='#'): span.color-white: span.color-white__title Сыпучие материалы
+                    li: a(href='#'): span.color-white: span.color-white__title Каменный уголь
+
+        .container.container-header
+            .row: .col-lg-offset-1.col-lg-11
+                .index-slider__content
+                    .hidden-md-up
+                        .text-center.index-slider__logo: +img('assets/header/logo', 'png')
+                        br
+                    .index-slider__slider-content
+                        .row
+                            .col-lg-10
+                                .index-slider__slider
+                                    .index-slider__slider-section
+                                        p.index-slider__slider-title С нами выгодно
+                                            br
+                                            |в любой сезон
+                                        p.index-slider__slider-desc комплектация строительства качественными строительными материалами на всех его циклах в установленные сроки
+
+                                    .index-slider__slider-section
+                                        p.index-slider__slider-title С нами выгодно
+                                            br
+                                            |в любой сезон
+                                        p.index-slider__slider-desc комплектация строительства качественными строительными материалами на всех его циклах в установленные сроки
+
+                                    .index-slider__slider-section
+                                        p.index-slider__slider-title С нами выгодно
+                                            br
+                                            |в любой сезон
+                                        p.index-slider__slider-desc комплектация строительства качественными строительными материалами на всех его циклах в установленные сроки
+                            .col-lg-2.text-right
+                                br
+                                br
+                                .index-slider__slider-btn
+                                    button.slick-prev
+                                    button.slick-next
+                    br
+                    br
+                    a(href='#').calculator-btn.calculator-btn_active.not-styleLink.text-left: span Расчёт кирпичной кладки
+                .hidden-lg-down
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    br
+                    .index-slider__form
+                        span.index-slider__form-title Поиск по каталогу
+                        input(placeholder="например: кирпич рядовой").index-slider__form-input
+                        button.index-slider__form-btn: +icon('search', 'svg-search', 20, 20)
+
+
+
+    .well
+        .hidden-xs-down
+            br
+            br
+        br
+        .container
+            .row
+                .col-lg-8
+                    h2.title-big Наша продукция
+                .col-lg-4.text-right
+                    .title-big-link
+                        a(href="#").color-block.not-styleLink: span.color-block__title.color-block__title_viewBorder Перейти в каталог
+
+            br
+            .index-categoryList
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/1')
+                            +img('content/categoryList__item/2')
+                            +img('content/categoryList__item/3')
+                        span.index-categoryList__item-title Кирпич
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Рядовой керамический
+                            li: a(href="#") Лицевой керамический
+                            li: a(href="#") Силикатный
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/2')
+                        span.index-categoryList__item-title Керамические
+                            br
+                            |блоки
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/3')
+                            +img('content/categoryList__item/4')
+                            +img('content/categoryList__item/5')
+                        span.index-categoryList__item-title Стеновые блоки
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Пеноблок
+                            li: a(href="#") Газоблок
+                            li: a(href="#") Шлакоблок
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/4')
+                            +img('content/categoryList__item/5')
+                            +img('content/categoryList__item/6')
+                        span.index-categoryList__item-title ЖБИ
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Плиты перекрытия ПБ
+                            li: a(href="#") Блоки ФБС
+                            li: a(href="#").not-styleLink.color-blue
+                                span.color-blue__title.color-blue__title_dashed.color-blue__title_viewBorder Все категории товаров
+                                |&nbsp;
+                                +icon('arrow-bottom', 'svg-arrow-bottom', 9, 6)
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/5')
+                            +img('content/categoryList__item/6')
+                            +img('content/categoryList__item/7')
+                        span.index-categoryList__item-title Теплоизоляция
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Технониколь
+                            li: a(href="#") Эковер
+                            li: a(href="#") Утеплитель ИЗБА
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/6')
+                            +img('content/categoryList__item/7')
+                            +img('content/categoryList__item/8')
+                        span.index-categoryList__item-title Бетон
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Товарный бетон
+                            li: a(href="#") Раствор
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/7')
+                            +img('content/categoryList__item/8')
+                            +img('content/categoryList__item/9')
+                        span.index-categoryList__item-title Сыпучие материалы
+                        ul.index-categoryList__item-list
+                            li: a(href="#") Доставка щебня автотранспортом
+                            li: a(href="#") Доставка щебня ж/д вагонами
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/8')
+                            +img('content/categoryList__item/9')
+                        span.index-categoryList__item-title Каменный уголь
+                .index-categoryList__section
+                    .index-categoryList__item
+                        .index-categoryList__item-img
+                            +img('content/categoryList__item/9')
+                            +img('content/categoryList__item/1')
+                            +img('content/categoryList__item/2')
+                            +img('content/categoryList__item/3')
+                        span.index-categoryList__item-title Металлопрокат
+                        div(style="overflow: hidden;")
+                            .index-categoryList__item-listSections
+                                .index-categoryList__item-listSections-section
+                                    ul.index-categoryList__item-list
+                                        li: a(href="#") Швеллер
+                                        li: a(href="#") Арматура
+                                .index-categoryList__item-listSections-section
+                                    ul.index-categoryList__item-list
+                                        li: a(href="#") Двутавр
+                                        li: a(href="#") Кровельные материалы
+            .hidden-xs-down
+                br
+                br
+            br
+            br
 
     .container
-
-
-
-
-
+        br
+        br
+        .title-big Наши партнёры
+        br
+        br
+        .partners-list.arrow-default.dots-default
+            .partners-list__section: +img('content/partners-list/1')
+            .partners-list__section: +img('content/partners-list/2')
+            .partners-list__section: +img('content/partners-list/3')
+            .partners-list__section: +img('content/partners-list/4')
+            .partners-list__section: +img('content/partners-list/5')
+            .partners-list__section: +img('content/partners-list/1')
+            .partners-list__section: +img('content/partners-list/2')
+            .partners-list__section: +img('content/partners-list/3')
+            .partners-list__section: +img('content/partners-list/4')
+            .partners-list__section: +img('content/partners-list/5')
+        br.hidden-xs-down
+        br
 
 block script
     script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
     script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
-
-
-
-
 
 
 

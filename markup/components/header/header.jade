@@ -21,7 +21,7 @@ mixin header(data)
 
             a(href="#").header__logo: +img('assets/header/logo', 'png')
             .header__top
-                .container.header__padding-left.header__top-content
+                .container.header__padding-left.header__top-content.container-header
                     a(href="#").header__top-padding.header__top-link.hidden-lg-up Перейти в каталог
                     .header__top-padding.header__top-padding_top
                         .row
@@ -44,7 +44,7 @@ mixin header(data)
                                 div.hidden-lg-up
                                     button.btn.btn-blue.btn-sm(data-toggle="modal" data-target="#modal-callback") Отправить заявку
             .header__bottom
-                .container.header__padding-left
+                .container.header__padding-left.container-header
                     .header__table
                         .header__table-cell
                             .header__bottom-nav

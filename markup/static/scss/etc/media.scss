@@ -5,111 +5,14 @@ body, html{
   min-width: 320px;
 }
 
+@include my-media-query(min, 1590px) {
+  .header{
+    height: 156px !important;
+  }
+}
 @include my-media-query(max, 1590px) {
-  .header__padding-left {
-    //padding-left: 80px;
-  }
   .header {
-    &__logo {
-      width: 120px;
-    }
-  }
-}
-@include my-media-query(max, 1408px) {
-  .header__padding-left{
-    //padding-left: 80px;
-  }
-  .header {
-    &__logo {
-      display: none;
-    }
-  }
-}
-
-@include my-media-query(max, map_get($grid-breakpoints, xl)-1) {
-  .catalog {
-    &-content {
-      &__left {
-        width: 24%;
-      }
-      &__right {
-        width: 76%;
-      }
-    }
-  }
-
-  .item-list{
-    margin: -8px;
-    &__section {
-      padding: 8px;
-    }
-  }
-
-  .item{
-    &__title {
-      font-size: 15px;
-      &-sub {
-        font-size: 12px;
-      }
-    }
-    &__features{
-      margin-left: -6px;
-      margin-right: -6px;
-      &-section{
-        font-size: 12px;
-      }
-      >*{
-        padding: 0 6px;
-        b {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  .catalogList > ul > li {
-    > a {
-      font-size: 15px;
-      padding-top: 21px;
-      padding-bottom: 21px;
-    }
-    > ul > li > a {
-      font-size: 14px;
-    }
-  }
-
-  .filter-table{
-    &__cell{
-      +*{
-        padding-left: 20px;
-      }
-    }
-  }
-
-  .pageTitle {
-    padding: 25px 0;
-    &__title {
-      font-size: 30px;
-    }
-  }
-  .calculator-btn{
-    &:not(.calculator-btn_otvet){
-      font-size: 14px;
-      &> span {
-        padding-left: 45px;
-        padding-right: 15px;
-        &:before{
-          margin-left: 10px;
-        }
-      }
-    }
-  }
-
-  .sub-menu {
-    padding: 40px 0;
-  }
-  .header {
-    &__top{
+    &__top {
       font-size: 13px;
       &-nav {
         margin: 0 -10px;
@@ -120,28 +23,28 @@ body, html{
         }
       }
     }
-    &__bottom{
+    &__bottom {
       line-height: 90px;
-      .btn-sm{
+      .btn-sm {
         font-size: 14px;
         padding: 11px 15px;
       }
     }
-    &__phones{
+    &__phones {
       margin: 0 -15px;
       &-item {
         font-size: 16px;
         padding: 0 15px;
       }
     }
-    &__table{
-      &-cell{
-        &_btn{
+    &__table {
+      &-cell {
+        &_btn {
           padding-left: 10px;
         }
       }
     }
-    &__bottom{
+    &__bottom {
       &-line {
         margin: 0 25px;
       }
@@ -162,47 +65,221 @@ body, html{
   }
 }
 
-@include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
-  .detail {
-    &__table {
-      &-cell {
-        + * {
-          padding-left: 20px;
+  @include my-media-query(max, 1374px) {
+    .header__logo, .index-slider__category{
+      width: 205px;
+      &-list > ul > li > a {
+        font-size: 14px;
+        &> span {
+          padding-left: 25px;
+        }
+      }
+      &-list > ul > li > ul {
+        padding-left: 40px;
+        font-size: 13px;
+        &:after {
+          left: 40px;
+        }
+        >li{
+          >a{
+            font-size: 13px;
+            padding: 3px 0;
+          }
         }
       }
     }
   }
-  .hr-catalog-content {
-    margin-left: -15px;
-    margin-right: -15px;
-  }
-  .btnToggle-el{
-    display: none;
-  }
-  .catalog {
-    &-content {
-      >*{
-        display: block;
-        padding: 0;
-        border: none;
+  @include my-media-query(min, 1392px) {
+    .arrow-default{
+      .slick-arrow{
+        &.slick-prev{
+          margin-right: 70px;
+        }
+        &.slick-next{
+          margin-left: 70px;
+        }
       }
-      &__left {
-        width: auto;
+    }
+  }
+  @include my-media-query(max, 1276px) {
+    .header__logo, .index-slider__category{
+      width: 160px;
+    }
+  }
+  @include my-media-query(min, 1250px) {
+    .arrow-default{
+      .slick-arrow{
+        &.slick-prev{
+          right: 100%;
+          left: auto;
+        }
+        &.slick-next{
+          left: 100%;
+          right: auto;
+        }
       }
-      &__right {
-        width: auto;
-        .table-block{
-          margin-right: -15px;
-          margin-left: -15px;
-          table{
-            >tbody, >thead{
-              >tr{
-                >td, >th{
-                  &:nth-of-type(1){
-                    padding-left: 15px;
-                  }
-                  &:last-child{
-                    padding-right: 15px;
+    }
+  }
+
+  @include my-media-query(max, 1408px) {
+    .header__padding-left{
+      //padding-left: 80px;
+    }
+    .header {
+      &__logo {
+        //display: none;
+      }
+    }
+  }
+
+  @include my-media-query(max, map_get($grid-breakpoints, xl)-1) {
+    .header__logo, .index-slider__category{
+      display: none;
+    }
+    .catalog {
+      &-content {
+        &__left {
+          width: 24%;
+        }
+        &__right {
+          width: 76%;
+        }
+      }
+    }
+
+    .item-list{
+      margin: -8px;
+      &__section {
+        padding: 8px;
+      }
+    }
+
+    .item{
+      &__title {
+        font-size: 15px;
+        &-sub {
+          font-size: 12px;
+        }
+      }
+      &__features{
+        margin-left: -6px;
+        margin-right: -6px;
+        &-section{
+          font-size: 12px;
+        }
+        >*{
+          padding: 0 6px;
+          b {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .catalogList > ul > li {
+      > a {
+        font-size: 15px;
+        padding-top: 21px;
+        padding-bottom: 21px;
+      }
+      > ul > li > a {
+        font-size: 14px;
+      }
+    }
+
+    .filter-table{
+      &__cell{
+        +*{
+          padding-left: 20px;
+        }
+      }
+    }
+
+    .pageTitle {
+      padding: 25px 0;
+      &__title {
+        font-size: 30px;
+      }
+    }
+    .pageTitle{
+      .calculator-btn{
+        &:not(.calculator-btn_otvet){
+          font-size: 14px;
+          &> span {
+            padding-left: 45px;
+            padding-right: 15px;
+            &:before{
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .sub-menu {
+      padding: 40px 0;
+    }
+
+  }
+
+  @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+
+    .index-slider{
+      .calculator-btn{
+        text-align: center;
+      }
+    }
+
+    .index-categoryList {
+      &__section {
+        width: 50%;
+      }
+      &__item-title {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+    .detail {
+      &__table {
+        &-cell {
+          + * {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+    .hr-catalog-content {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .btnToggle-el{
+      display: none;
+    }
+    .catalog {
+      &-content {
+        >*{
+          display: block;
+          padding: 0;
+          border: none;
+        }
+        &__left {
+          width: auto;
+        }
+        &__right {
+          width: auto;
+          .table-block{
+            margin-right: -15px;
+            margin-left: -15px;
+            table{
+              >tbody, >thead{
+                >tr{
+                  >td, >th{
+                    &:nth-of-type(1){
+                      padding-left: 15px;
+                    }
+                    &:last-child{
+                      padding-right: 15px;
+                    }
                   }
                 }
               }
@@ -211,396 +288,477 @@ body, html{
         }
       }
     }
-  }
-  .contacts-list {
-    &__section {
-      width: 50%;
+    .contacts-list {
+      &__section {
+        width: 50%;
+      }
     }
-  }
-  #yamap{
-    height: 500px;
+    #yamap{
+      height: 500px;
+    }
+
+    .footer {
+      &__top{
+        padding-left: 0;
+      }
+      &__bottom{
+        text-align: center;
+      }
+      &__logo{
+        margin: 0 auto;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+    .pageTitle {
+      &__title {
+        line-height: normal;
+      }
+    }
+    .header-after {
+      padding: 15px 0;
+      .breadcrumb {
+        > li {
+          > * {
+            line-height: normal;
+          }
+        }
+      }
+    }
+    .header{
+      height: 55px;
+      &.active{
+        .header__top{
+          opacity: 1;
+          visibility: visible;
+          &-content{
+            right: 0;
+          }
+        }
+      }
+      &__top{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-left: 55px;
+        background-color: rgba(75, 75, 75, 0.68);
+        height: 100vh;
+        line-height: normal;
+        width: 100%;
+        opacity: 0;
+        @include tr;
+        visibility: hidden;
+        &-padding{
+          padding-left: 38px;
+          padding-right: 20px;
+          &_top{
+            padding-top: 15px;
+          }
+        }
+        &-content{
+          height: 100vh;
+          background-color: white;
+          box-shadow: -10px 0 15px rgba(0, 0, 0, 0.15);
+          width: auto;
+          padding: 0;
+          overflow: auto;
+
+          position: relative;
+          right: -100%;
+          @include tr;
+          .btn-sm{
+            padding: 9px 7px;
+          }
+        }
+        &-nav{
+          margin: 0;
+          li{
+            display: block;
+            padding: 0;
+            a{
+              color: #4b4b4b;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: normal;
+              padding: 10px 0;
+              >span{
+                border: none;
+              }
+            }
+          }
+        }
+      }
+      &__download{
+        text-align: left;
+        font-size: 14px;
+        display: block;
+        line-height: 75px;
+      }
+      &__bottom{
+        display: none;
+      }
+    }
+    .category-list {
+      display: block;
+      font-size: 0;
+      margin: 0 -15px;
+      > * {
+        font-size: 14px;
+        display: inline-block;
+        width: 50%;
+        padding: 0 15px;
+      }
+    }
   }
 
-  .footer {
-    &__top{
-      padding-left: 0;
-    }
-    &__bottom{
-      text-align: center;
-    }
-    &__logo{
-      margin: 0 auto;
-      text-align: left;
-      margin-bottom: 20px;
+  @include my-media-query(min, map_get($grid-breakpoints, xs)) {
+
+  }
+
+  @include my-media-query(min, map_get($grid-breakpoints, sm)) {
+
+  }
+
+  @include my-media-query(min, map_get($grid-breakpoints, md)) {
+    .index-slider {
+      &__form {
+        margin-left: -30px;
+      }
     }
   }
-  .pageTitle {
-    &__title {
-      line-height: normal;
+
+  @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+    .btnToggle-el{
+      display: block !important;
     }
-  }
-  .header-after {
-    padding: 15px 0;
-    .breadcrumb {
-      > li {
-        > * {
-          line-height: normal;
+    .header {
+      &__mobile {
+        display: none;
+      }
+    }
+    .header{
+      &.scroll{
+        .header__content {
+          box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
         }
       }
     }
   }
-  .header{
-    height: 55px;
-    &.active{
-      .header__top{
-        opacity: 1;
-        visibility: visible;
-        &-content{
-          right: 0;
+
+  @include my-media-query(min, map_get($grid-breakpoints, xl)) {
+    @include my-media-query(max, 1590px) {
+      .container-header {
+        padding-left: 80px;
+      }
+    }
+    @include my-media-query(max, 1452px) {
+      .container-header{
+        padding-left: 160px;
+      }
+    }
+    .header {
+      height: 140px;
+    }
+  }
+
+  @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+    .index-slider {
+      padding-top: 40px;
+      padding-bottom: 33px;
+      &__slider {
+        text-align: center;
+        padding: 0 5px;
+        &-btn {
+          .slick-arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: -17.5px;
+            &.slick-prev{
+              left: 0;
+              margin-left: -16px;
+            }
+            &.slick-next{
+              right: 0;
+              margin-right: -16px;
+            }
+          }
+        }
+        &-title {
+          font-size: 50px;
+          line-height: 60px;
+        }
+        &-desc {
+          display: inline-block;
+          font-size: 15px;
+          line-height: 25px;
+          width: 500px;
         }
       }
     }
-    &__top{
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding-left: 55px;
-      background-color: rgba(75, 75, 75, 0.68);
-      height: 100vh;
-      line-height: normal;
-      width: 100%;
-      opacity: 0;
-      @include tr;
-      visibility: hidden;
-      &-padding{
-        padding-left: 38px;
-        padding-right: 20px;
-        &_top{
+
+    .detail-content{
+      display: block;
+      &__cell{
+        display: block;
+        +*{
+          padding-left: 0;
           padding-top: 15px;
         }
-      }
-      &-content{
-        height: 100vh;
-        background-color: white;
-        box-shadow: -10px 0 15px rgba(0, 0, 0, 0.15);
-        width: auto;
-        padding: 0;
-        overflow: auto;
-
-        position: relative;
-        right: -100%;
-        @include tr;
-        .btn-sm{
-          padding: 9px 7px;
+        &_img{
+          width: auto;
         }
       }
-      &-nav{
-        margin: 0;
-        li{
+    }
+    .detail{
+      &__table{
+        display: block;
+        &-cell{
           display: block;
-          padding: 0;
-          a{
-            color: #4b4b4b;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: normal;
-            padding: 10px 0;
-            >span{
-              border: none;
+          +*{
+            padding-left: 0;
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+
+    .item-list {
+      &__section {
+        width: 50%;
+      }
+    }
+    .filter-table{
+      display: block;
+      width: auto;
+      font-size: 0;
+      margin: -15px;
+      &__cell{
+        display: inline-block;
+        font-size: 14px;
+        width: 50%;
+        padding: 15px !important;
+        &:not(:last-child){
+          padding-right: inherit;
+        }
+        +*{
+          padding-left: inherit;
+          border: inherit;
+        }
+      }
+    }
+
+    #yamap{
+      height: 400px;
+    }
+    .pageTitle {
+      padding: 15px 0;
+      &__title {
+        font-size: 25px;
+      }
+    }
+    hr {
+      margin: 35px 0;
+    }
+    .form-control {
+      font-size: 15px;
+      padding: 12px 15px;
+    }
+    .btn-input{
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .footer {
+      &__table{
+        display: block;
+        font-size: 0;
+        text-align: center;
+        width: 100%;
+        margin: -20px 0;
+        &-cell{
+          display: inline-block;
+          width: 50%;
+          padding: 20px 0;
+        }
+      }
+      &__iconBlock{
+        margin: 0 auto;
+        &_addres{
+          >*{
+            +*{
+              padding-left: 25px;
+            }
+          }
+        }
+        &_phone{
+
+          >*{
+            +*{
+              padding-left: 20px;
             }
           }
         }
       }
     }
-    &__download{
-      text-align: left;
-      font-size: 14px;
-      display: block;
-      line-height: 75px;
-    }
-    &__bottom{
-      display: none;
-    }
+
+
   }
-  .category-list {
-    display: block;
-    font-size: 0;
-    margin: 0 -15px;
-    > * {
-      font-size: 14px;
-      display: inline-block;
-      width: 50%;
-      padding: 0 15px;
-    }
-  }
-}
 
-@include my-media-query(min, map_get($grid-breakpoints, xs)) {
-
-}
-
-@include my-media-query(min, map_get($grid-breakpoints, sm)) {
-
-}
-
-@include my-media-query(min, map_get($grid-breakpoints, md)) {
-
-}
-
-@include my-media-query(min, map_get($grid-breakpoints, lg)) {
-  .btnToggle-el{
-    display: block !important;
-  }
-  .header {
-    &__mobile {
-      display: none;
-    }
-  }
-  .header{
-    height: 137px;
-    &.scroll{
-      .header__content {
-        box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
+  @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+    .index-slider {
+      background-image: url('%=static=%content/bg-index-slider-mobile.jpg');
+      .calculator-btn{
+        font-size: 13px;
+        &> span {
+          padding-left: 54px;
+          padding-right: 25px;
+        }
       }
-    }
-  }
-}
-
-@include my-media-query(min, map_get($grid-breakpoints, xl)) {
-  .header {
-    height: 153px;
-  }
-}
-
-@include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
-  .detail-content{
-    display: block;
-    &__cell{
-      display: block;
-      +*{
-        padding-left: 0;
-        padding-top: 15px;
-      }
-      &_img{
-        width: auto;
-      }
-    }
-  }
-  .detail{
-    &__table{
-      display: block;
-      &-cell{
-        display: block;
-        +*{
-          padding-left: 0;
-          padding-top: 15px;
+      &__slider {
+        &-title {
+          text-shadow: 0 4px 10px rgba(47, 47, 47, 0.1);
+          color: white;
+          font-size: 30px;
+          font-weight: 800;
+          line-height: 40px;
+        }
+        &-desc {
+          color: white;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
         }
       }
     }
-  }
+    .title-big {
+      font-size: 31px;
+    }
+    .well{
 
-  .item-list {
-    &__section {
-      width: 50%;
     }
-  }
-  .filter-table{
-    display: block;
-    width: auto;
-    font-size: 0;
-    margin: -15px;
-    &__cell{
-      display: inline-block;
-      font-size: 14px;
-      width: 50%;
-      padding: 15px !important;
-      &:not(:last-child){
-        padding-right: inherit;
-      }
-      +*{
-        padding-left: inherit;
-        border: inherit;
-      }
-    }
-  }
-
-  #yamap{
-    height: 400px;
-  }
-  .pageTitle {
-    padding: 15px 0;
-    &__title {
-      font-size: 25px;
-    }
-  }
-  hr {
-    margin: 35px 0;
-  }
-  .form-control {
-    font-size: 15px;
-    padding: 12px 15px;
-  }
-  .btn-input{
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .footer {
-    &__table{
-      display: block;
-      font-size: 0;
-      text-align: center;
-      width: 100%;
-      margin: -20px 0;
-      &-cell{
-        display: inline-block;
-        width: 50%;
-        padding: 20px 0;
-      }
-    }
-    &__iconBlock{
-      margin: 0 auto;
-      &_addres{
-        >*{
-          +*{
-            padding-left: 25px;
-          }
-        }
-      }
-      &_phone{
-
-        >*{
-          +*{
-            padding-left: 20px;
-          }
-        }
-      }
-    }
-  }
-
-
-}
-
-@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-  h2, .h2 {
-    font-size: 19px;
-  }
-  .item-list {
-    &__section {
-      width: 100%;
-    }
-  }
-  .filter-table {
-    &__cell {
-      width: 100%;
-    }
-  }
-  .item-list-slider {
-    &__section {
-      .item{
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-    }
-  }
-  .callbackTwo {
-    padding-bottom: 20px;
-    padding-top: 40px;
-    &__title {
-      font-size: 24px;
-      &-sub {
-        font-size: 14px;
-        padding-top: 8px;
-      }
-    }
-  }
-  .form-group {
-    &_two{
-      margin-bottom: 20px;
-    }
-    &_required{
-      &:after{
-        right: 14px;
-        top: 16px;
-      }
-      .form-control{
-        padding-right: 30px;
-      }
-    }
-  }
-  .panel-body {
-    padding: 20px 19px;
-  }
-  .panel-title {
-    padding-left: 19px;
-    padding-right: 43px;
-    &:after{
-      right: 15px;
-    }
-  }
-  .panel-group .panel + .panel {
-    margin-top: 15px;
-  }
-  .pageTitle {
-    padding: 15px 0;
-    &__title {
-      font-size: 22px;
-    }
-  }
-  .category-list {
-    > * {
-      width: 100%;
-    }
-  }
-  .block-blue, .block-tabs {
-    padding: 35px 0;
-  }
-
-  .callback__title{
-    &-big {
-      font-size: 32px;
-    }
-    &-small {
-      font-size: 15px;
-    }
-  }
-  .footer {
-    &__table{
-      margin: -10px 0;
-      &-cell{
+    .index-categoryList {
+      &__section {
         width: 100%;
-        padding: 10px 0;
       }
     }
-    &__iconBlock{
-      margin: 0;
-      &-icon{
-        width: 50px;
-      }
-      &-title{
-        padding-left: 10px;
+    h2, .h2 {
+      font-size: 19px;
+    }
+    .item-list {
+      &__section {
+        width: 100%;
       }
     }
-    &__logo{
-      display: block;
-      text-align: center;
-      >*{
-        display: block;
-        +*{
-          padding-left: 0;
-          padding-top: 10px;
+    .filter-table {
+      &__cell {
+        width: 100%;
+      }
+    }
+    .item-list-slider {
+      &__section {
+        .item{
+          padding-left: 15px;
+          padding-right: 15px;
         }
       }
     }
-    &__bottom{
-      padding-bottom: 0;
+    .callbackTwo {
+      padding-bottom: 20px;
+      padding-top: 40px;
+      &__title {
+        font-size: 24px;
+        &-sub {
+          font-size: 14px;
+          padding-top: 8px;
+        }
+      }
     }
-    .copyright{
-      background: #f9f9f9;
-      margin: 0 -15px;
-      display: block;
-      padding: 23px 15px;
+    .form-group {
+      &_two{
+        margin-bottom: 20px;
+      }
+      &_required{
+        &:after{
+          right: 14px;
+          top: 16px;
+        }
+        .form-control{
+          padding-right: 30px;
+        }
+      }
+    }
+    .panel-body {
+      padding: 20px 19px;
+    }
+    .panel-title {
+      padding-left: 19px;
+      padding-right: 43px;
+      &:after{
+        right: 15px;
+      }
+    }
+    .panel-group .panel + .panel {
+      margin-top: 15px;
+    }
+    .pageTitle {
+      padding: 15px 0;
+      &__title {
+        font-size: 22px;
+      }
+    }
+    .category-list {
+      > * {
+        width: 100%;
+      }
+    }
+    .block-blue, .block-tabs {
+      padding: 35px 0;
+    }
+
+    .callback__title{
+      &-big {
+        font-size: 32px;
+      }
+      &-small {
+        font-size: 15px;
+      }
+    }
+    .footer {
+      &__table{
+        margin: -10px 0;
+        &-cell{
+          width: 100%;
+          padding: 10px 0;
+        }
+      }
+      &__iconBlock{
+        margin: 0;
+        &-icon{
+          width: 50px;
+        }
+        &-title{
+          padding-left: 10px;
+        }
+      }
+      &__logo{
+        display: block;
+        text-align: center;
+        >*{
+          display: block;
+          +*{
+            padding-left: 0;
+            padding-top: 10px;
+          }
+        }
+      }
+      &__bottom{
+        padding-bottom: 0;
+      }
+      .copyright{
+        background: #f9f9f9;
+        margin: 0 -15px;
+        display: block;
+        padding: 23px 15px;
+      }
     }
   }
-
-}
