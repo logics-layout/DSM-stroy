@@ -19,13 +19,13 @@ mixin header(data)
 
 
 
-            a(href="#").header__logo: +img('assets/header/logo', 'png')
+            a(href="./").header__logo.block-logo: +img('assets/header/logo', 'png')
             .header__top
                 .container.header__padding-left.header__top-content.container-header
                     a(href="#").header__top-padding.header__top-link.hidden-lg-up Перейти в каталог
                     .header__top-padding.header__top-padding_top
-                        .row
-                            .col-lg-9
+                        .header__top-table
+                            .header__top-table-cell
                                 ul.header__top-nav
                                     li.hidden-lg-up: a(href="#"): span Спецпредложения
                                     li.hidden-lg-up: a(href="#"): span Наши объекты
@@ -35,7 +35,7 @@ mixin header(data)
                                     li: a(href="#"): span Вопрос и ответ
                                     li.hidden-md-down: a(href="#"): span Контактная информация
                                     li.hidden-lg-up: a(href="#"): span Контакы
-                            .col-lg-3
+                            .header__top-table-cell
                                 .hidden-lg-up
                                     br
                                 a(href="#").header__download
@@ -54,7 +54,7 @@ mixin header(data)
                                             span Каталог
                                                 +icon('arrow-bottom')
                                         .sub-menu
-                                            .container
+                                            .container.container-header
                                                 .sub-menu__sections
                                                     .sub-menu__sections-section
                                                         .sub-menu__list
@@ -100,7 +100,7 @@ mixin header(data)
                                     li: a(href="#"): span Наши объекты
 
                         .header__table-cell: .header__bottom-line
-                        .header__table-cell
+                        .header__table-cell.text-center
                             .header__phones
                                 a(href="#").header__phones-item: span 8 (351) 200 40 18
                                 a(href="#").header__phones-item: span 8 (909) 069 14 60

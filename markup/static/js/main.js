@@ -253,34 +253,17 @@ $('.btnToggle').click(function () {
 });
 
 
-// $('.collapse').find('.collapse-toggle').click(function(e){
-//     e.preventDefault();
-//     var _this = $(this),
-//         content = _this.next(),
-//         parentContent = _this.closest('.collapse-toggle-content')[0]?_this.closest('.collapse-toggle-content'):_this.closest('.collapse'),
-//         time = 300,
-//         className = 'active';
-//
-//     if(content.hasClass('collapse-toggle-content')){
-//         content.slideToggle(time);
-//         _this.parent().toggleClass(className);
-//
-//         parentContent.find('.collapse-toggle-content').not(content).stop().slideUp(time);
-//         parentContent.find('.collapse-toggle').not(_this).parent().removeClass(className);
-//     }
-// });
-
-
-// var videoBlock = $('.videoBlock'),
-//     videoBlockLabel = $('.videoBlock__label'),
-//     videoBlockIframe = $('.videoBlock__main-iframe');
-//
-// videoBlockLabel.click(function(){
-//     var _this = $(this);
-//
-//     _this.addClass('active').siblings().removeClass('active');
-//     var iframe = _this.find('iframe');
-//     if(iframe[0]){
-//         videoBlockIframe.attr('src', iframe.attr('src'));
-//     }
-// });
+if ($.fn.masonry) {
+    indexTiles = $('.object').masonry({
+        itemSelector: '.object-item',
+        columnWidth: ".grid-sizer",
+        gutter: '.gutter-sizer',
+        percentPosition: true
+    });
+    if (indexTiles[0]) {
+        indexTiles.imagesLoaded().progress(function() {
+            indexTiles.masonry('layout').addClass('active');
+            indexTiles.masonry('reloadItems');
+        });
+    }
+}

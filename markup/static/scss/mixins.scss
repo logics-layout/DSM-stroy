@@ -50,6 +50,9 @@
 @mixin text-border-bottom($name, $color){
   .color-#{$name}{
     color: $color;
+    svg{
+      fill: $color;
+    }
     &__title{
       border-bottom: 1px solid transparent;
       &_viewBorder{

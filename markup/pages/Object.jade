@@ -1,7 +1,7 @@
 extends main
 
 block head
-    - var headData = {title: "Контакты"}
+    - var headData = {title: "Наши объекты"}
 //    - var callbackCategory = true
 //    - var tabcordion = true
 //    - var category = true
@@ -9,14 +9,31 @@ block head
 block content
     .container
         br
-        br
-        br
-        br
+        .object.not-styleLink
+            .grid-sizer
+            .gutter-sizer
+            a.object-item.col-2.row-2(style="background-image: url('%=static=%img/content/object/1.png');", href='#')
 
+            a.object-item.col-1.row-2(style="background-image: url('%=static=%img/content/object/2.png');", href='#')
 
+            a.object-item.col-1(style="background-image: url('%=static=%img/content/object/3.png');", href='#')
+
+            a.object-item.col-1(style="background-image: url('%=static=%img/content/object/4.png');", href='#')
+
+            a.object-item.col-1(style="background-image: url('%=static=%img/content/object/5.png');", href='#')
+            a.object-item.col-1.row-2(style="background-image: url('%=static=%img/content/object/7.png');", href='#')
+            a.object-item.col-2.row-2(style="background-image: url('%=static=%img/content/object/8.png');", href='#')
+            a.object-item.col-1(style="background-image: url('%=static=%img/content/object/6.png');", href='#')
+
+        br
+        a(href="#").not-styleLink.color-blue
+            span.color-blue__title.color-blue__title_dashed.color-blue__title_viewBorder Смотреть ещё
+            | &nbsp;
+            +icon('arrow-bottom', 'svg-arrow-bottom', 9, 6)
 
 block script
-    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+    script(src="%=static=%js/separate-js/imagesloaded.pkgd.min.js" type="text/javascript")
+    script(src="%=static=%js/separate-js/Masonry.js" type="text/javascript")
 
 
 

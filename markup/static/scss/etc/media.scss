@@ -5,69 +5,18 @@ body, html{
   min-width: 320px;
 }
 
+@include my-media-query(min, 1680px) {
+
+}
+
 @include my-media-query(min, 1590px) {
   .header{
     height: 156px !important;
   }
 }
-@include my-media-query(max, 1590px) {
-  .header {
-    &__top {
-      font-size: 13px;
-      &-nav {
-        margin: 0 -10px;
-        li {
-          a {
-            padding: 0 10px;
-          }
-        }
-      }
-    }
-    &__bottom {
-      line-height: 90px;
-      .btn-sm {
-        font-size: 14px;
-        padding: 11px 15px;
-      }
-    }
-    &__phones {
-      margin: 0 -15px;
-      &-item {
-        font-size: 16px;
-        padding: 0 15px;
-      }
-    }
-    &__table {
-      &-cell {
-        &_btn {
-          padding-left: 10px;
-        }
-      }
-    }
-    &__bottom {
-      &-line {
-        margin: 0 25px;
-      }
-      &-nav {
-        > ul {
-          margin: 0 -13px;
-          > li {
-            > a {
-              display: block;
-              color: #282528;
-              font-size: 15px;
-              padding: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
   @include my-media-query(max, 1374px) {
-    .header__logo, .index-slider__category{
-      width: 205px;
+    .index-slider__category{
       &-list > ul > li > a {
         font-size: 14px;
         &> span {
@@ -102,8 +51,7 @@ body, html{
     }
   }
   @include my-media-query(max, 1276px) {
-    .header__logo, .index-slider__category{
-      width: 160px;
+    .index-slider__category{
     }
   }
   @include my-media-query(min, 1250px) {
@@ -133,8 +81,10 @@ body, html{
   }
 
   @include my-media-query(max, map_get($grid-breakpoints, xl)-1) {
-    .header__logo, .index-slider__category{
-      display: none;
+    .object {
+      &-item {
+        height: 227px;
+      }
     }
     .catalog {
       &-content {
@@ -223,6 +173,23 @@ body, html{
   }
 
   @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+    .index-slider {
+      padding-top: 40px;
+    }
+    .block-logo{
+      display: none;
+    }
+    .object{
+      .col-1,
+      .grid-sizer,
+      .col-3,
+      .col-4{
+        width: 48.97%;
+      }
+      .row-2 {
+        //height: 466px;
+      }
+    }
 
     .index-slider{
       .calculator-btn{
@@ -428,6 +395,127 @@ body, html{
   }
 
   @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+    .header {
+      &__top {
+        &-table{
+          display: table;
+          width: 100%;
+          &-cell{
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    @include my-media-query(max, 1666px) {
+      .block-logo{
+        width: 205px;
+      }
+    }
+
+
+    @include my-media-query(max, 1590px) {
+      .container-header{
+        padding-left: 40px;
+      }
+      .header {
+        &__top {
+          font-size: 13px;
+          &-nav {
+            margin: 0 -10px;
+            li {
+              a {
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+        &__bottom {
+          .btn-sm {
+            font-size: 14px;
+            padding: 11px 15px;
+          }
+        }
+        &__phones {
+          display: inline-block;
+          margin: 0 -15px;
+          &-item {
+            font-size: 16px;
+            padding: 0 15px;
+          }
+        }
+        &__table {
+          &-cell {
+            &_btn {
+              padding-left: 10px;
+            }
+          }
+        }
+        &__bottom {
+          &-line {
+            margin: 0 25px;
+          }
+          &-nav {
+            line-height: 90px;
+            > ul {
+              margin: 0 -13px;
+              > li {
+                > a {
+                  display: block;
+                  color: #282528;
+                  font-size: 15px;
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    @include my-media-query(max, 1508px) {
+      .container-header{
+        padding-left: 140px;
+      }
+    }
+    @include my-media-query(max, 1326px) {
+      .container-header{
+        padding-left: 190px;
+      }
+      .header__phones {
+        width: 170px;
+        max-width: 100%;
+      }
+    }
+    @include my-media-query(max, 1216px) {
+      .container-header{
+        padding-left: 227px;
+      }
+    }
+    @include my-media-query(max, 1199px) {
+      .container-header{
+        padding: 0 15px;
+        padding-left: 230px;
+        width: 100%;
+      }
+      .header {
+        &__phones-item {
+          font-size: 14px;
+        }
+        &__table-cell_btn {
+          padding-left: 0;
+        }
+      }
+    }
+    @include my-media-query(max, 1044px) {
+      .header__bottom-line{
+        margin: 0;
+      }
+      .header__top-nav{
+        font-size: 12px;
+      }
+    }
+
     .btnToggle-el{
       display: block !important;
     }
@@ -446,24 +534,25 @@ body, html{
   }
 
   @include my-media-query(min, map_get($grid-breakpoints, xl)) {
-    @include my-media-query(max, 1590px) {
-      .container-header {
-        padding-left: 80px;
-      }
-    }
-    @include my-media-query(max, 1452px) {
-      .container-header{
-        padding-left: 160px;
-      }
-    }
     .header {
       height: 140px;
     }
   }
 
   @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+    .object {
+      &-item {
+        margin-bottom: 15px;
+      }
+      .col-1,
+      .grid-sizer,
+      .col-2,
+      .col-3,
+      .col-4{
+        width: 100%;
+      }
+    }
     .index-slider {
-      padding-top: 40px;
       padding-bottom: 33px;
       &__slider {
         text-align: center;
