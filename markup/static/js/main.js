@@ -15,7 +15,7 @@ $(window).on({
     },
     scroll: function () {
         var scrollTop = $(window).scrollTop();
-        if(scrollTop > 0){
+        if(scrollTop > 10){
             header.addClass('scroll')
         }else{
             header.removeClass('scroll')

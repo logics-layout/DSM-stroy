@@ -526,6 +526,14 @@ body, html{
     }
     .header{
       &.scroll{
+        .header__logo{
+          line-height: 112px;
+          transition: line-height .2s;
+        }
+        .header__bottom-nav {
+          line-height: 62px;
+          transition: line-height .2s;
+        }
         .header__content {
           box-shadow: 0 17px 20px rgba(47, 47, 47, 0.15);
         }

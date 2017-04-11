@@ -641,6 +641,43 @@ html, body {
     display: block;
     transition: .2s;
     margin-bottom: 2%;
+    color: #fff;
+    overflow: hidden;
+    &:hover{
+      .object-item__content{
+        top: 0;
+      }
+    }
+    &__content{
+      @include tr;
+      position: absolute;
+      overflow: hidden;
+      top: 100%;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: rgba(60, 119, 241, 0.77);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 23px 25px;
+      fill: currentColor;
+      &-bottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 18px 24px;
+      }
+    }
+    &__text{
+      margin-top: 11px;
+    }
+    &__title{
+      font-size: 15px;
+      font-weight: 700;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
   }
   .gutter-sizer{
     width: 2%;
